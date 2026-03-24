@@ -1,0 +1,53 @@
+---
+import InnerPage from '../layouts/InnerPage.astro';
+import { BOOK_CALL_URL } from '../config/site';
+---
+
+<InnerPage
+	title="About"
+	description="TeleTrex builds fast, friendly AI for startups and small businesses—practical systems, not science projects."
+>
+	<h1>About TeleTrex</h1>
+	<p class="page-lead">
+		We’re an AI agency for teams that care about <strong>margin, momentum, and sanity</strong>. If you’re
+		tired of growth costing a linear jump in headcount—or of losing deals to slow follow-up—we’re built
+		for you.
+	</p>
+
+	<p class="prose-block">
+		Our bias is toward <strong>plain language and shipped work</strong>. We start from the business pain
+		(what’s breaking, what’s expensive, what customers keep asking) and design assistants and workflows
+		your people will actually adopt.
+	</p>
+
+	<p class="prose-block">
+		You don’t need a technical background to work with us. You need a clear picture of what “better”
+		looks like—we’ll handle the rest alongside you, with guardrails and room to escalate to humans when
+		it matters.
+	</p>
+
+	<h2 class="section-title">What we believe</h2>
+	<ul class="prose-block bullets">
+		<li>Speed and tone matter as much as the model under the hood</li>
+		<li>AI should reduce repetitive work—not add a new maze to manage</li>
+		<li>If it doesn’t move a real metric (time, revenue, satisfaction), it’s not done</li>
+	</ul>
+
+	<p class="prose-block about-cta">
+		<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call</a>
+	</p>
+</InnerPage>
+
+<style>
+	.bullets {
+		padding-left: 1.25rem;
+	}
+
+	.bullets li {
+		margin-bottom: 0.5rem;
+	}
+
+	.about-cta {
+		margin-top: 2rem;
+	}
+</style>

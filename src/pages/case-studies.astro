@@ -1,0 +1,101 @@
+---
+import InnerPage from '../layouts/InnerPage.astro';
+import { BOOK_CALL_URL } from '../config/site';
+---
+
+<InnerPage
+	title="Case Studies"
+	description="How TeleTrex helps startups and SMBs scale customer conversations with practical AI."
+>
+	<h1>Case Studies</h1>
+	<p class="page-lead">
+		Real outcomes beat buzzwords. Here are the kinds of results we build toward—names anonymized where
+		we need to protect client privacy.
+	</p>
+
+	<article class="study">
+		<h2 class="study__title">B2B services firm: fewer stalled proposals</h2>
+		<p class="study__meta">Relay · Growth package</p>
+		<p class="prose-block">
+			A ten-person shop was losing momentum between “we’re interested” and the first scoped call. Relay
+			answered service boundaries, typical timelines, and what to prepare—so prospects showed up
+			warmer and the team stopped retyping the same email threads.
+		</p>
+		<p class="study__result"><strong>Result:</strong> Faster time-to-call and less back-and-forth before meetings.</p>
+	</article>
+
+	<article class="study">
+		<h2 class="study__title">Regional retailer: after-hours questions handled</h2>
+		<p class="study__meta">Relay · Starter → Growth</p>
+		<p class="prose-block">
+			Evening and weekend traffic was mostly “Do you carry…?” and “What are your hours?” Human answers
+			were perfect—but not always possible. A guided assistant cut noise for the floor staff while still
+			escalating anything sensitive to a person the next day.
+		</p>
+		<p class="study__result"><strong>Result:</strong> Fewer frustrated walk-aways; staff focused on in-store customers.</p>
+	</article>
+
+	<article class="study">
+		<h2 class="study__title">SaaS trial signups: clearer next steps</h2>
+		<p class="study__meta">Custom workflow</p>
+		<p class="prose-block">
+			Trials were converting, but support tickets repeated the same onboarding FAQs. We paired concise,
+			on-brand answers with links to the right docs—so success wasn’t the default handler for every
+			tier-one question.
+		</p>
+		<p class="study__result"><strong>Result:</strong> Lighter support load at peak signup weeks.</p>
+	</article>
+
+	<p class="prose-block cta-line">
+		Want something similar?
+		<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call</a>
+	</p>
+</InnerPage>
+
+<style>
+	.study {
+		margin: 0 0 2rem;
+		padding: 1.5rem;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+	}
+
+	.study:last-of-type {
+		margin-bottom: 0;
+	}
+
+	.study__title {
+		margin: 0 0 0.35rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.2rem;
+		letter-spacing: -0.02em;
+	}
+
+	.study__meta {
+		margin: 0 0 1rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--color-accent);
+		letter-spacing: 0.03em;
+	}
+
+	.study__result {
+		margin: 1rem 0 0;
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+	}
+
+	.study__result strong {
+		color: var(--color-text);
+	}
+
+	.cta-line {
+		margin-top: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1rem;
+	}
+</style>

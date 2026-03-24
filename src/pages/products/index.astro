@@ -1,0 +1,86 @@
+---
+import InnerPage from '../../layouts/InnerPage.astro';
+---
+
+<InnerPage
+	title="Products"
+	description="TeleTrex AI products for startups and SMBs: Relay for instant lead and customer answers, and more."
+>
+	<h1>Products</h1>
+	<p class="page-lead">
+		Everything here is built for real-world operations—fewer dropped conversations, less copy-paste, and
+		answers that sound like your business.
+	</p>
+
+	<ul class="product-grid">
+		<li>
+			<a class="product-card" href="/products/relay">
+				<h2 class="product-card__name">Relay</h2>
+				<p class="product-card__tagline">Instant, on-brand answers for every lead</p>
+				<p class="product-card__desc">
+					Your first line of defense for website chat, email, and DMs—so prospects get a fast, friendly
+					reply even when the team is heads-down.
+				</p>
+				<span class="product-card__cta">Learn about Relay →</span>
+			</a>
+		</li>
+	</ul>
+</InnerPage>
+
+<style>
+	.product-grid {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 1.25rem;
+	}
+
+	.product-card {
+		display: block;
+		padding: 1.5rem;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+		box-shadow: 0 1px 2px rgba(28, 25, 23, 0.04);
+		text-decoration: none;
+		color: inherit;
+		transition:
+			border-color 0.15s ease,
+			box-shadow 0.15s ease;
+	}
+
+	.product-card:hover {
+		border-color: var(--color-accent);
+		box-shadow: 0 4px 16px rgba(15, 118, 110, 0.12);
+	}
+
+	.product-card__name {
+		margin: 0 0 0.35rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.35rem;
+		letter-spacing: -0.02em;
+		color: var(--color-text);
+	}
+
+	.product-card__tagline {
+		margin: 0 0 0.75rem;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: var(--color-accent);
+	}
+
+	.product-card__desc {
+		margin: 0 0 1rem;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+		color: var(--color-text-muted);
+	}
+
+	.product-card__cta {
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: var(--color-accent);
+	}
+</style>

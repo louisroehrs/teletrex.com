@@ -1,0 +1,72 @@
+---
+import Layout from './Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = `${title} · TeleTrex`;
+---
+
+<Layout title={pageTitle} description={description}>
+	<div class="page">
+		<SiteHeader />
+		<main class="inner-main">
+			<slot />
+		</main>
+		<SiteFooter />
+	</div>
+</Layout>
+
+<style>
+	.page {
+		max-width: 52rem;
+		margin: 0 auto;
+		padding: 1.25rem 1.5rem 3rem;
+	}
+
+	.inner-main :global(h1) {
+		margin: 0 0 0.75rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: clamp(1.75rem, 4vw, 2.25rem);
+		line-height: 1.2;
+		letter-spacing: -0.02em;
+		color: var(--color-text);
+	}
+
+	.inner-main :global(.page-lead) {
+		margin: 0 0 2rem;
+		font-size: 1.0625rem;
+		line-height: 1.65;
+		color: var(--color-text-muted);
+		max-width: 40rem;
+	}
+
+	.inner-main :global(.prose-block) {
+		margin: 0 0 1.25rem;
+		color: var(--color-text-muted);
+		max-width: 42rem;
+		line-height: 1.65;
+	}
+
+	.inner-main :global(.prose-block strong) {
+		color: var(--color-text);
+	}
+
+	.inner-main :global(.section-title) {
+		margin: 2.5rem 0 1rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.25rem;
+		letter-spacing: -0.02em;
+	}
+
+	.inner-main :global(.section-title:first-child) {
+		margin-top: 0;
+	}
+</style>

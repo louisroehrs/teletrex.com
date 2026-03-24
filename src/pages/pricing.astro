@@ -1,0 +1,107 @@
+---
+import InnerPage from '../layouts/InnerPage.astro';
+import { BOOK_CALL_URL } from '../config/site';
+---
+
+<InnerPage
+	title="Pricing"
+	description="TeleTrex pricing: simple packages for startups and SMBs, plus custom scopes when you need them."
+>
+	<h1>Pricing</h1>
+	<p class="page-lead">
+		Most teams want a clear starting point—not a 40-line enterprise matrix. Here’s how we usually work
+		together; exact numbers depend on volume, channels, and how custom you need the setup to be.
+	</p>
+
+	<div class="tiers">
+		<article class="tier">
+			<h2 class="tier__name">Starter</h2>
+			<p class="tier__for">For proving value fast</p>
+			<p class="tier__body">
+				One primary use case (for example: website Q&amp;A or email triage), a focused knowledge base,
+				and launch support so your team isn’t on their own day one.
+			</p>
+		</article>
+		<article class="tier tier--featured">
+			<h2 class="tier__name">Growth</h2>
+			<p class="tier__for">For teams feeling the inbox pressure</p>
+			<p class="tier__body">
+				Multiple touchpoints, richer workflows, and tighter guardrails. Typical when Relay is handling a
+				real slice of volume and you need reliability plus room to iterate.
+			</p>
+		</article>
+		<article class="tier">
+			<h2 class="tier__name">Partner</h2>
+			<p class="tier__for">For custom or multi-location needs</p>
+			<p class="tier__body">
+				Integrations, advanced routing, or ongoing optimization. We’ll scope this together after we
+				understand your stack and goals—no surprises.
+			</p>
+		</article>
+	</div>
+
+	<p class="prose-block prose-block--spaced">
+		<strong>Ballpark:</strong> Most Starter and Growth engagements land in a straightforward monthly or
+		project range—we’ll quote after a short call. If we’re not the right fit, we’ll say so.
+	</p>
+
+	<p class="prose-block">
+		<a class="btn btn--primary btn--large" href={BOOK_CALL_URL}>Book a call for a quote</a>
+	</p>
+</InnerPage>
+
+<style>
+	.tiers {
+		display: grid;
+		gap: 1rem;
+		margin-top: 0.5rem;
+	}
+
+	@media (min-width: 700px) {
+		.tiers {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.25rem;
+			align-items: stretch;
+		}
+	}
+
+	.tier {
+		margin: 0;
+		padding: 1.25rem;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+	}
+
+	.tier--featured {
+		border-color: var(--color-accent);
+		box-shadow: 0 0 0 1px rgba(15, 118, 110, 0.15);
+	}
+
+	.tier__name {
+		margin: 0 0 0.35rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.15rem;
+	}
+
+	.tier__for {
+		margin: 0 0 0.75rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--color-accent);
+	}
+
+	.tier__body {
+		margin: 0;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+		color: var(--color-text-muted);
+	}
+
+	.prose-block--spaced {
+		margin-top: 2rem;
+	}
+</style>

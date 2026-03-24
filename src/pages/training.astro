@@ -1,0 +1,54 @@
+---
+import InnerPage from '../layouts/InnerPage.astro';
+import { BOOK_CALL_URL } from '../config/site';
+---
+
+<InnerPage
+	title="Training"
+	description="TeleTrex training: practical AI workshops for startups and SMBs—no jargon, real workflows your team can use."
+>
+	<h1>Training</h1>
+	<p class="page-lead">
+		AI only helps if your people feel confident using it. We run <strong>short, practical sessions</strong> for
+		non-technical teams—what to use, what to avoid, and how to fold tools into day-to-day work without
+		adding chaos.
+	</p>
+
+	<p class="prose-block">
+		Formats are flexible: lunch-and-learns, half-day workshops, or a short series tied to a rollout (for
+		example, after Relay goes live). Every session is grounded in <strong>your customers, your tone, and your
+		rules</strong>—not generic demos.
+	</p>
+
+	<h2 class="section-title">Typical topics</h2>
+	<ul class="prose-block bullets">
+		<li>How to prompt clearly and get consistent outputs</li>
+		<li>Where AI saves time vs. where a human should step in</li>
+		<li>Privacy, accuracy, and “when not to paste that into a tool”</li>
+		<li>Using your TeleTrex setup day to day (handoffs, escalations, FAQs)</li>
+	</ul>
+
+	<h2 class="section-title">Who it’s for</h2>
+	<p class="prose-block">
+		Founders, ops, sales, and support leads who want the team aligned—without turning everyone into
+		engineers. We keep the room friendly and the takeaways concrete.
+	</p>
+
+	<p class="prose-block training-cta">
+		<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call to plan a session</a>
+	</p>
+</InnerPage>
+
+<style>
+	.bullets {
+		padding-left: 1.25rem;
+	}
+
+	.bullets li {
+		margin-bottom: 0.5rem;
+	}
+
+	.training-cta {
+		margin-top: 2rem;
+	}
+</style>

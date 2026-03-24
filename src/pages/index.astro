@@ -1,11 +1,265 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { BOOK_CALL_URL } from '../config/site';
 ---
 
 <Layout>
-	<Welcome />
+	<div class="page">
+		<SiteHeader />
+
+		<main>
+			<section class="hero">
+				<p class="eyebrow">For startups &amp; small businesses</p>
+				<h1>Scale operations without scaling overhead.</h1>
+				<p class="subhead">
+					Fast, friendly AI that shortens the path from interest to customer—and cuts repetitive
+					hand-holding.
+				</p>
+				<p class="lead">
+					No jargon required: we focus on the business pain, then build something your team can
+					actually use.
+				</p>
+				<div class="hero__actions">
+					<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call</a>
+					<p class="hero__note">Free intro. We’ll ask what’s slowing you down and what “good” looks like.</p>
+				</div>
+			</section>
+
+			<section class="section" aria-labelledby="pains-heading">
+				<h2 id="pains-heading">Sound familiar?</h2>
+				<ul class="cards">
+					<li class="card">
+						<h3>Leads go cold while you’re in meetings</h3>
+						<p>
+							Prospects ask the same questions over email and DMs. By the time someone replies, they’ve
+							moved on.
+						</p>
+					</li>
+					<li class="card">
+						<h3>Your best people are stuck repeating themselves</h3>
+						<p>
+							Pricing, onboarding, “how does this work?”—it adds up. That’s time not spent selling,
+							serving, or shipping.
+						</p>
+					</li>
+					<li class="card">
+						<h3>Growth feels expensive</h3>
+						<p>
+							Hiring for every extra conversation doesn’t scale. You need leverage without a huge new
+							headcount line.
+						</p>
+					</li>
+				</ul>
+			</section>
+
+			<section class="section section--tint" aria-labelledby="help-heading">
+				<h2 id="help-heading">What we build</h2>
+				<p class="section__intro">
+					Practical AI assistants and workflows—trained on how <em>you</em> talk to customers and run the
+					business. The goal is simple: faster answers, fewer dropped balls, and a lighter load on your
+					team.
+				</p>
+				<ul class="bullets">
+					<li>
+						<strong>Clear next steps for leads and customers</strong> — so fewer conversations stall or
+						bounce.
+					</li>
+					<li>
+						<strong>Consistent, on-brand answers</strong> — 24/7 where it helps, with guardrails so nothing
+						wild goes out the door.
+					</li>
+					<li>
+						<strong>Connected to how you already work</strong> — email, forms, your site, or the tools you
+						already use (we’ll keep it straightforward).
+					</li>
+				</ul>
+			</section>
+
+			<section class="cta-band" aria-labelledby="cta-heading">
+				<h2 id="cta-heading">Tell us what’s broken—we’ll map a sane fix</h2>
+				<p>No pressure pitch. If we’re not the right fit, we’ll say so.</p>
+				<a class="btn btn--primary btn--large" href={BOOK_CALL_URL}>Book a call</a>
+			</section>
+		</main>
+
+		<SiteFooter />
+	</div>
 </Layout>
+
+<style>
+	.page {
+		max-width: 52rem;
+		margin: 0 auto;
+		padding: 1.25rem 1.5rem 3rem;
+	}
+
+	.hero {
+		padding-bottom: 3rem;
+	}
+
+	.eyebrow {
+		margin: 0 0 0.75rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--color-accent);
+	}
+
+	.hero h1 {
+		margin: 0 0 1rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: clamp(2rem, 5vw, 2.75rem);
+		line-height: 1.15;
+		letter-spacing: -0.02em;
+		color: var(--color-text);
+	}
+
+	.subhead {
+		margin: 0 0 0.75rem;
+		font-size: 1.2rem;
+		line-height: 1.5;
+		color: var(--color-text);
+		font-weight: 500;
+		max-width: 36rem;
+	}
+
+	.lead {
+		margin: 0 0 1.75rem;
+		font-size: 1.0625rem;
+		line-height: 1.65;
+		color: var(--color-text-muted);
+		max-width: 40rem;
+	}
+
+	.hero__actions {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.75rem;
+	}
+
+	.hero__note {
+		margin: 0;
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		max-width: 22rem;
+	}
+
+	.section {
+		padding: 2.5rem 0;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.section h2 {
+		margin: 0 0 1.25rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.5rem;
+		letter-spacing: -0.02em;
+	}
+
+	.cards {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 1rem;
+	}
+
+	@media (min-width: 640px) {
+		.cards {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.25rem;
+		}
+	}
+
+	.card {
+		margin: 0;
+		padding: 1.25rem;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+		box-shadow: 0 1px 2px rgba(28, 25, 23, 0.04);
+	}
+
+	.card h3 {
+		margin: 0 0 0.5rem;
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1.35;
+	}
+
+	.card p {
+		margin: 0;
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.55;
+	}
+
+	.section--tint {
+		background: var(--color-surface);
+		margin: 0 -1.5rem;
+		padding: 2.5rem 1.5rem;
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+	}
+
+	.section__intro {
+		margin: 0 0 1.25rem;
+		color: var(--color-text-muted);
+		max-width: 42rem;
+	}
+
+	.section__intro em {
+		font-style: italic;
+		color: var(--color-text);
+	}
+
+	.bullets {
+		margin: 0;
+		padding-left: 1.15rem;
+		color: var(--color-text-muted);
+	}
+
+	.bullets li {
+		margin-bottom: 0.75rem;
+		padding-left: 0.35rem;
+	}
+
+	.bullets li:last-child {
+		margin-bottom: 0;
+	}
+
+	.bullets strong {
+		color: var(--color-text);
+		font-weight: 600;
+	}
+
+	.cta-band {
+		margin-top: 2.5rem;
+		padding: 2.5rem 1.5rem;
+		text-align: center;
+		background: linear-gradient(160deg, #f0fdfa 0%, #faf8f5 100%);
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+	}
+
+	.cta-band h2 {
+		margin: 0 0 0.5rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.35rem;
+		letter-spacing: -0.02em;
+	}
+
+	.cta-band p {
+		margin: 0 0 1.25rem;
+		color: var(--color-text-muted);
+		font-size: 0.9375rem;
+	}
+
+</style>

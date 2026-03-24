@@ -1,0 +1,82 @@
+---
+import InnerPage from '../layouts/InnerPage.astro';
+import { BOOK_CALL_URL } from '../config/site';
+---
+
+<InnerPage
+	title="Contact"
+	description="Contact TeleTrex: book a call or email us about AI for your startup or small business."
+>
+	<h1>Contact</h1>
+	<p class="page-lead">
+		The fastest way to get clarity is a short call—we’ll ask what’s noisy today and what a win looks
+		like in the next 90 days.
+	</p>
+
+	<div class="contact-options">
+		<div class="contact-card">
+			<h2 class="contact-card__title">Book a call</h2>
+			<p class="contact-card__text">Best for scoping, pricing questions, and “is this even a fit?”</p>
+			<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call</a>
+		</div>
+		<div class="contact-card">
+			<h2 class="contact-card__title">Email</h2>
+			<p class="contact-card__text">Prefer writing first? Send context and we’ll reply within a business day or two.</p>
+			<a class="contact-card__link" href="mailto:hello@teletrex.com">hello@teletrex.com</a>
+		</div>
+	</div>
+
+	<p class="prose-block contact-note">
+		<strong>Office hours:</strong> We work with clients across time zones; we’ll align on availability
+		when we schedule.
+	</p>
+</InnerPage>
+
+<style>
+	.contact-options {
+		display: grid;
+		gap: 1.25rem;
+		margin-top: 0.5rem;
+	}
+
+	@media (min-width: 560px) {
+		.contact-options {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	.contact-card {
+		padding: 1.35rem;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+	}
+
+	.contact-card__title {
+		margin: 0 0 0.5rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.1rem;
+	}
+
+	.contact-card__text {
+		margin: 0 0 1rem;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+		color: var(--color-text-muted);
+	}
+
+	.contact-card__link {
+		font-weight: 600;
+		color: var(--color-accent);
+		text-decoration: none;
+	}
+
+	.contact-card__link:hover {
+		text-decoration: underline;
+	}
+
+	.contact-note {
+		margin-top: 2rem;
+	}
+</style>

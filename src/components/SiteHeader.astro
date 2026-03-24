@@ -1,0 +1,207 @@
+---
+import { BOOK_CALL_URL } from '../config/site';
+
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const links = [
+	{ href: '/products', label: 'Products' },
+	{ href: '/training', label: 'Training' },
+	{ href: '/pricing', label: 'Pricing' },
+	{ href: '/case-studies', label: 'Case Studies' },
+	{ href: '/about', label: 'About' },
+	{ href: '/contact', label: 'Contact' },
+] as const;
+
+function linkActive(href: string): boolean {
+	if (href === '/') return pathname === '/';
+	return pathname === href || pathname.startsWith(`${href}/`);
+}
+---
+
+<header class="site-header">
+	<div class="site-header__bar">
+		<a class="site-header__logo" href="/">TeleTrex</a>
+
+		<details class="site-header__drawer">
+			<summary class="site-header__summary">
+				<span class="site-header__summary-label">Menu</span>
+			</summary>
+			<nav class="site-header__nav site-header__nav--drawer" aria-label="Primary">
+				{
+					links.map(({ href, label }) => (
+						<a
+							href={href}
+							class:list={['site-header__link', { 'is-active': linkActive(href) }]}
+							aria-current={linkActive(href) ? 'page' : undefined}
+						>
+							{label}
+						</a>
+					))
+				}
+			</nav>
+		</details>
+
+		<nav class="site-header__nav site-header__nav--inline" aria-label="Primary">
+			{
+				links.map(({ href, label }) => (
+					<a
+						href={href}
+						class:list={['site-header__link', { 'is-active': linkActive(href) }]}
+						aria-current={linkActive(href) ? 'page' : undefined}
+					>
+						{label}
+					</a>
+				))
+			}
+		</nav>
+
+		<a class="btn btn--header site-header__cta" href={BOOK_CALL_URL}>Book a call</a>
+	</div>
+</header>
+
+<style>
+	.site-header {
+		padding-bottom: 1.5rem;
+		margin-bottom: 0.5rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.site-header__bar {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1rem;
+	}
+
+	.site-header__logo {
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.25rem;
+		color: var(--color-text);
+		text-decoration: none;
+		letter-spacing: -0.02em;
+		margin-right: auto;
+	}
+
+	.site-header__logo:hover {
+		color: var(--color-accent);
+	}
+
+	.site-header__nav {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem 1rem;
+		flex-wrap: wrap;
+	}
+
+	.site-header__nav--inline {
+		display: none;
+	}
+
+	.site-header__link {
+		font-size: 0.9375rem;
+		font-weight: 500;
+		color: var(--color-text-muted);
+		text-decoration: none;
+		padding: 0.35rem 0;
+		border-bottom: 2px solid transparent;
+		transition:
+			color 0.15s ease,
+			border-color 0.15s ease;
+	}
+
+	.site-header__link:hover {
+		color: var(--color-text);
+	}
+
+	.site-header__link.is-active {
+		color: var(--color-accent);
+		border-bottom-color: var(--color-accent);
+	}
+
+	.site-header__cta {
+		flex-shrink: 0;
+	}
+
+	.site-header__drawer {
+		position: relative;
+	}
+
+	.site-header__summary {
+		list-style: none;
+		cursor: pointer;
+		font-family: var(--font-body);
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: var(--color-text);
+		padding: 0.5rem 0.85rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--color-border);
+		background: var(--color-surface);
+	}
+
+	.site-header__summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.site-header__summary::after {
+		content: '';
+		display: inline-block;
+		width: 0.35em;
+		height: 0.35em;
+		margin-left: 0.45em;
+		border-right: 2px solid currentColor;
+		border-bottom: 2px solid currentColor;
+		transform: rotate(45deg);
+		vertical-align: 0.15em;
+		transition: transform 0.15s ease;
+	}
+
+	.site-header__drawer[open] .site-header__summary::after {
+		transform: rotate(-135deg);
+		vertical-align: -0.05em;
+	}
+
+	.site-header__nav--drawer {
+		position: absolute;
+		right: 0;
+		top: calc(100% + 0.5rem);
+		min-width: 12rem;
+		padding: 0.5rem;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+		box-shadow: 0 8px 24px rgba(28, 25, 23, 0.08);
+		z-index: 20;
+	}
+
+	.site-header__nav--drawer .site-header__link {
+		padding: 0.65rem 0.75rem;
+		border-radius: 0.5rem;
+		border-bottom: none;
+	}
+
+	.site-header__nav--drawer .site-header__link.is-active {
+		background: rgba(15, 118, 110, 0.08);
+	}
+
+	@media (min-width: 900px) {
+		.site-header__drawer {
+			display: none;
+		}
+
+		.site-header__nav--inline {
+			display: flex;
+			flex: 1;
+			justify-content: center;
+			margin: 0 0.5rem;
+		}
+
+		.site-header__logo {
+			margin-right: 0;
+		}
+	}
+</style>
