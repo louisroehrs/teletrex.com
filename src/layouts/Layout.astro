@@ -1,11 +1,13 @@
 ---
+import CookieConsent from '../components/CookieConsent.astro';
+
 interface Props {
 	title?: string;
 	description?: string;
 }
 
 const {
-	title = 'TeleTrex — AI that helps your business grow without the busywork',
+	title = 'TeleTrex \u2014 AI that helps your business grow without the busywork',
 	description = 'Fast, friendly AI solutions for startups and small businesses. Scale operations, shorten the path from interest to customer, and spend less time on repetitive questions.',
 } = Astro.props;
 ---
@@ -13,15 +15,6 @@ const {
 <!doctype html>
 <html lang="en">
 	<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SFT78TWDDH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SFT78TWDDH');
-</script><!-- End Google Tag Manager -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -37,11 +30,8 @@ const {
 		/>
 	</head>
 	<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDP8T957"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 		<slot />
+		<CookieConsent />
 	</body>
 </html>
 
