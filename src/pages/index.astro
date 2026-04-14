@@ -11,7 +11,7 @@ import { BOOK_CALL_URL } from '../config/site';
 
 		<main>
 			<section class="hero">
-				<p class="eyebrow">For startups &amp; small businesses</p>
+				<p class="eyebrow">For startups &amp; growing businesses</p>
 				<h1>Scale operations without scaling overhead.</h1>
 				<p class="subhead">
 					Fast, friendly AI that shortens the path from interest to customer—and cuts repetitive
@@ -21,7 +21,7 @@ import { BOOK_CALL_URL } from '../config/site';
 					No jargon required: we focus on the business pain, then build something your team can
 					actually use.
 				</p>
-				<div class="hero__actions">
+				<div class="card hero__actions">
 					<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call</a>
 					<p class="hero__note">Free intro. We’ll ask what’s slowing you down and what “good” looks like.</p>
 				</div>
@@ -78,7 +78,7 @@ import { BOOK_CALL_URL } from '../config/site';
 			</section>
 
 			<section class="cta-band" aria-labelledby="cta-heading">
-				<h2 id="cta-heading">Tell us what’s broken—we’ll map a sane fix</h2>
+				<h2 id="cta-heading">Call us and let's discover an improved reality.</h2>
 				<p>No pressure pitch. If we’re not the right fit, we’ll say so.</p>
 				<a class="btn btn--primary btn--large" href={BOOK_CALL_URL}>Book a call</a>
 			</section>
@@ -137,16 +137,16 @@ import { BOOK_CALL_URL } from '../config/site';
 
 	.hero__actions {
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.75rem;
+		flex-direction: row;
+		align-items: center;
+		gap: 2rem;
 	}
 
 	.hero__note {
 		margin: 0;
 		font-size: 0.875rem;
 		color: var(--color-text-muted);
-		max-width: 22rem;
+		max-width: 21em;
 	}
 
 	.section {
@@ -202,7 +202,6 @@ import { BOOK_CALL_URL } from '../config/site';
 
 	.section--tint {
 		background: var(--color-surface);
-		margin: 0 -1.5rem;
 		padding: 2.5rem 1.5rem;
 		border: 1px solid var(--color-border);
 		border-radius: 0.75rem;
