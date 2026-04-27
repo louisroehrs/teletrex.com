@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeleTrex — Brand Style Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset & base ─────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --color-bg:           #faf8f5;
+    --color-surface:      #ffffff;
+    --color-text:         #1c1917;
+    --color-text-muted:   #57534e;
+    --color-accent:       #0f766e;
+    --color-accent-hover: #0d9488;
+    --color-border:       #e7e5e4;
+    --color-light-teal:   #f0fdfa;
+
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+
+    --radius-card:   0.75rem;
+    --radius-btn:    0.5rem;
+    --radius-sm:     0.375rem;
+
+    --shadow-card:   0 1px 2px rgba(28,25,23,.04);
+    --shadow-float:  0 8px 24px rgba(28,25,23,.08);
+    --shadow-deep:   0 4px 6px -1px rgba(28,25,23,.07), 0 12px 32px -4px rgba(28,25,23,.12);
+    --shadow-accent: 0 0 0 1px rgba(15,118,110,.15);
+    --shadow-btn:    0 1px 2px rgba(28,25,23,.08);
+  }
+
+  html { font-size: 17px; scroll-behavior: smooth; }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+
+  /* ── Layout ──────────────────────────────────────────────────────────── */
+  .wrap { max-width: 52rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ── Cover ───────────────────────────────────────────────────────────── */
+  .cover {
+    background: var(--color-accent);
+    padding: 5rem 0 4rem;
+    margin-bottom: 4rem;
+  }
+  .cover-inner { max-width: 52rem; margin: 0 auto; padding: 0 1.5rem; }
+  .cover-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(167,243,208,.9);
+    margin-bottom: 1rem;
+  }
+  .cover h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .cover-sub {
+    font-size: 1.0625rem;
+    color: rgba(167,243,208,.85);
+    max-width: 36rem;
+  }
+  .cover-meta {
+    margin-top: 2.5rem;
+    font-size: 0.875rem;
+    color: rgba(167,243,208,.7);
+  }
+
+  /* ── Section headers ─────────────────────────────────────────────────── */
+  .section { margin-bottom: 4rem; }
+
+  .section-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin-bottom: 0.35rem;
+  }
+
+  .section-desc {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+    max-width: 40rem;
+  }
+
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 3rem 0;
+  }
+
+  /* ── Color palette ───────────────────────────────────────────────────── */
+  .palette { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 1rem; }
+
+  .swatch {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+  .swatch-color { height: 5rem; }
+  .swatch-info  { padding: .75rem .875rem .875rem; }
+  .swatch-name  { font-size: .8125rem; font-weight: 600; color: var(--color-text); line-height: 1.3; }
+  .swatch-hex   { font-size: .75rem; font-family: 'SF Mono', 'Fira Code', monospace; color: var(--color-text-muted); margin-top: .2rem; }
+  .swatch-role  { font-size: .75rem; color: var(--color-text-muted); margin-top: .3rem; line-height: 1.4; }
+
+  /* ── Typography specimens ────────────────────────────────────────────── */
+  .type-stack { display: flex; flex-direction: column; gap: 2rem; }
+
+  .type-row {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .type-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .type-meta { padding-top: .25rem; }
+  .type-meta-name  { font-size: .8125rem; font-weight: 600; color: var(--color-accent); }
+  .type-meta-specs { font-size: .8125rem; color: var(--color-text-muted); margin-top: .3rem; line-height: 1.7; font-family: 'SF Mono','Fira Code',monospace; }
+
+  .type-specimen-display { font-family: var(--font-display); }
+  .type-specimen-body    { font-family: var(--font-body); }
+
+  /* ── Spacing ─────────────────────────────────────────────────────────── */
+  .spacing-grid { display: flex; flex-direction: column; gap: .75rem; }
+  .spacing-row  { display: flex; align-items: center; gap: 1rem; }
+  .spacing-bar  { background: var(--color-accent); opacity: .18; height: 1.5rem; border-radius: 3px; flex-shrink: 0; }
+  .spacing-bar.solid { opacity: 1; }
+  .spacing-label { font-size: .8125rem; font-family: 'SF Mono','Fira Code',monospace; color: var(--color-text-muted); min-width: 3.5rem; }
+  .spacing-desc  { font-size: .8125rem; color: var(--color-text-muted); }
+
+  /* ── Radius ──────────────────────────────────────────────────────────── */
+  .radius-grid { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .radius-swatch {
+    background: var(--color-surface);
+    border: 1.5px solid var(--color-border);
+    width: 6rem; height: 6rem;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: .35rem;
+  }
+  .radius-label { font-size: .75rem; color: var(--color-text-muted); font-family: 'SF Mono','Fira Code',monospace; text-align: center; }
+
+  /* ── Shadows ─────────────────────────────────────────────────────────── */
+  .shadow-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: 1.5rem; }
+  .shadow-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+  .shadow-name { font-size: .8125rem; font-weight: 600; color: var(--color-text); margin-bottom: .25rem; }
+  .shadow-val  { font-size: .7rem; font-family: 'SF Mono','Fira Code',monospace; color: var(--color-text-muted); word-break: break-all; line-height: 1.5; }
+
+  /* ── Buttons ─────────────────────────────────────────────────────────── */
+  .btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: .45rem;
+    font-family: var(--font-body); font-weight: 600;
+    font-size: .9375rem; line-height: 1;
+    border-radius: var(--radius-btn);
+    cursor: pointer; text-decoration: none;
+    transition: background .15s ease, box-shadow .15s ease, color .15s ease;
+    border: none; white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--color-accent); color: #fff;
+    padding: .75rem 1.375rem;
+    box-shadow: var(--shadow-btn);
+  }
+  .btn-primary:hover { background: var(--color-accent-hover); }
+
+  .btn-outline {
+    background: transparent; color: var(--color-accent);
+    padding: .7rem 1.3rem;
+    box-shadow: inset 0 0 0 2px var(--color-accent);
+  }
+  .btn-outline:hover { background: rgba(15,118,110,.06); }
+
+  .btn-ghost {
+    background: transparent; color: var(--color-text);
+    padding: .7rem 1.3rem;
+  }
+  .btn-ghost:hover { background: rgba(28,25,23,.05); }
+
+  .btn-sm { font-size: .875rem; padding: .55rem 1rem; }
+  .btn-lg { font-size: 1rem; padding: .875rem 1.625rem; }
+
+  /* ── Cards ───────────────────────────────────────────────────────────── */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1.25rem; }
+
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow .15s ease, border-color .15s ease;
+  }
+  .card:hover {
+    box-shadow: 0 4px 16px rgba(15,118,110,.12);
+    border-color: rgba(15,118,110,.3);
+  }
+  .card-eyebrow {
+    font-size: .8125rem; font-weight: 600; letter-spacing: .05em;
+    text-transform: uppercase; color: var(--color-accent);
+    margin-bottom: .6rem;
+  }
+  .card-title {
+    font-family: var(--font-display); font-size: 1.125rem;
+    font-weight: 600; color: var(--color-text);
+    letter-spacing: -.01em; margin-bottom: .5rem; line-height: 1.3;
+  }
+  .card-body { font-size: .9rem; color: var(--color-text-muted); line-height: 1.65; }
+
+  .card-featured {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-accent);
+  }
+
+  /* ── Links ───────────────────────────────────────────────────────────── */
+  .link-demo a {
+    color: var(--color-accent); font-weight: 500;
+    text-decoration: underline; text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    transition: text-decoration-color .15s ease;
+  }
+  .link-demo a:hover { text-decoration-color: var(--color-accent); }
+
+  /* ── Navigation specimen ─────────────────────────────────────────────── */
+  .nav-specimen {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 1rem 1.5rem;
+    display: flex; align-items: center; gap: 2rem;
+    box-shadow: var(--shadow-card);
+    flex-wrap: wrap;
+  }
+  .nav-brand {
+    font-family: var(--font-display); font-size: 1.25rem;
+    font-weight: 600; color: var(--color-text);
+    margin-right: 1rem;
+  }
+  .nav-link {
+    font-size: .9375rem; font-weight: 500; color: var(--color-text-muted);
+    text-decoration: none; padding: .25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .nav-link:hover { color: var(--color-text); }
+  .nav-link.active {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent);
+  }
+
+  /* ── Form elements ───────────────────────────────────────────────────── */
+  .form-demo { display: flex; flex-direction: column; gap: 1.25rem; max-width: 26rem; }
+  .form-label {
+    display: block; font-size: .875rem; font-weight: 600;
+    color: var(--color-text); margin-bottom: .4rem;
+  }
+  .form-input {
+    width: 100%; font-family: var(--font-body); font-size: .9375rem;
+    color: var(--color-text); background: var(--color-surface);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-btn); padding: .65rem .875rem;
+    transition: border-color .15s ease, box-shadow .15s ease;
+    outline: none;
+  }
+  .form-input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(15,118,110,.12);
+  }
+  .form-hint { font-size: .8125rem; color: var(--color-text-muted); margin-top: .3rem; }
+
+  /* ── Tags / badges ───────────────────────────────────────────────────── */
+  .tag-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .tag {
+    display: inline-block; font-size: .8125rem; font-weight: 500;
+    border-radius: 999px; padding: .25rem .75rem;
+    line-height: 1.4;
+  }
+  .tag-accent   { background: rgba(15,118,110,.1); color: var(--color-accent); }
+  .tag-neutral  { background: var(--color-border); color: var(--color-text-muted); }
+  .tag-surface  { background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text-muted); }
+
+  /* ── Iconography guide ───────────────────────────────────────────────── */
+  .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr)); gap: 1rem; }
+  .icon-item {
+    display: flex; flex-direction: column; align-items: center; gap: .4rem;
+    padding: .75rem .5rem;
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm); text-align: center;
+  }
+  .icon-item svg { width: 1.25rem; height: 1.25rem; color: var(--color-accent); }
+  .icon-label { font-size: .7rem; color: var(--color-text-muted); }
+
+  /* ── CTA band ────────────────────────────────────────────────────────── */
+  .cta-band {
+    background: linear-gradient(160deg, var(--color-light-teal) 0%, var(--color-bg) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .cta-band h3 {
+    font-family: var(--font-display); font-size: 1.5rem; font-weight: 600;
+    letter-spacing: -.02em; color: var(--color-text); margin-bottom: .5rem;
+  }
+  .cta-band p { font-size: .9375rem; color: var(--color-text-muted); margin-bottom: 1.5rem; }
+
+  /* ── Code tokens ─────────────────────────────────────────────────────── */
+  .token-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+  .token-table th {
+    text-align: left; font-size: .8125rem; font-weight: 600;
+    letter-spacing: .04em; text-transform: uppercase;
+    color: var(--color-text-muted); padding: .5rem .75rem;
+    border-bottom: 1.5px solid var(--color-border);
+  }
+  .token-table td {
+    padding: .6rem .75rem; border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+  }
+  .token-table tr:last-child td { border-bottom: none; }
+  .token-table code {
+    font-family: 'SF Mono','Fira Code',monospace; font-size: .8125rem;
+    background: rgba(28,25,23,.04); padding: .15rem .4rem;
+    border-radius: 3px; color: var(--color-accent);
+  }
+
+  /* ── TOC ─────────────────────────────────────────────────────────────── */
+  .toc {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-card); padding: 1.5rem 1.75rem;
+    margin-bottom: 3.5rem;
+  }
+  .toc-title { font-size: .8125rem; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 1rem; }
+  .toc ol { padding-left: 1.2rem; }
+  .toc li { margin-bottom: .35rem; }
+  .toc a {
+    font-size: .9375rem; color: var(--color-accent); text-decoration: none;
+    transition: opacity .15s;
+  }
+  .toc a:hover { opacity: .75; }
+
+  /* ── Misc ────────────────────────────────────────────────────────────── */
+  blockquote.pullquote {
+    border-left: 3px solid var(--color-accent);
+    padding: 1rem 1.5rem; margin: 0;
+    background: var(--color-light-teal);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-family: var(--font-display); font-size: 1.125rem;
+    font-style: italic; color: var(--color-text); line-height: 1.6;
+  }
+
+  .do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .do-dont-card { border-radius: var(--radius-sm); padding: 1.25rem; font-size: .9rem; }
+  .do   { background: rgba(15,118,110,.07); border: 1px solid rgba(15,118,110,.25); color: var(--color-text); }
+  .dont { background: rgba(220,38,38,.05);  border: 1px solid rgba(220,38,38,.2);  color: var(--color-text); }
+  .do-dont-label {
+    font-size: .75rem; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; margin-bottom: .5rem;
+  }
+  .do .do-dont-label   { color: var(--color-accent); }
+  .dont .do-dont-label { color: #dc2626; }
+
+  @media (max-width: 600px) {
+    .type-row { grid-template-columns: 1fr; }
+    .do-dont  { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Cover ──────────────────────────────────────────────────────────────── -->
+<div class="cover">
+  <div class="cover-inner">
+    <p class="cover-eyebrow">Brand &amp; Design System</p>
+    <h1>TeleTrex<br>Style Guide</h1>
+    <p class="cover-sub">
+      A complete reference for color, typography, spacing, and UI patterns
+      used across all TeleTrex touchpoints.
+    </p>
+    <p class="cover-meta">Version 1.0 — April 2026</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ── TOC ──────────────────────────────────────────────────────────────── -->
+  <div class="toc">
+    <p class="toc-title">Contents</p>
+    <ol>
+      <li><a href="#colors">Color Palette</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#spacing">Spacing &amp; Layout</a></li>
+      <li><a href="#radii">Border Radius</a></li>
+      <li><a href="#shadows">Shadows &amp; Elevation</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#cards">Cards</a></li>
+      <li><a href="#navigation">Navigation</a></li>
+      <li><a href="#forms">Form Elements</a></li>
+      <li><a href="#tags">Tags &amp; Badges</a></li>
+      <li><a href="#patterns">Patterns &amp; Motifs</a></li>
+      <li><a href="#tokens">CSS Design Tokens</a></li>
+      <li><a href="#voice">Voice &amp; Tone</a></li>
+    </ol>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 1. COLORS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="colors">
+    <p class="section-label">01</p>
+    <h2 class="section-title">Color Palette</h2>
+    <p class="section-desc">
+      A warm, minimal palette anchored by a single teal accent. All surfaces
+      use warm neutrals rather than cold whites to give the brand a tactile,
+      premium feel.
+    </p>
+
+    <div class="palette">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#faf8f5;border-bottom:1px solid #e7e5e4;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Background</div>
+          <div class="swatch-hex">#faf8f5</div>
+          <div class="swatch-role">Page &amp; app background</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#ffffff;border-bottom:1px solid #e7e5e4;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Surface</div>
+          <div class="swatch-hex">#ffffff</div>
+          <div class="swatch-role">Cards &amp; panels</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0f766e;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Accent</div>
+          <div class="swatch-hex">#0f766e</div>
+          <div class="swatch-role">Primary brand color, CTAs, links, active states</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0d9488;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Accent Hover</div>
+          <div class="swatch-hex">#0d9488</div>
+          <div class="swatch-role">Hover / focus state of accent elements</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#f0fdfa;border-bottom:1px solid #e7e5e4;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Light Teal</div>
+          <div class="swatch-hex">#f0fdfa</div>
+          <div class="swatch-role">Subtle tinted backgrounds, CTA bands</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1c1917;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Text</div>
+          <div class="swatch-hex">#1c1917</div>
+          <div class="swatch-role">Primary body &amp; heading text</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#57534e;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Text Muted</div>
+          <div class="swatch-hex">#57534e</div>
+          <div class="swatch-role">Captions, meta, secondary text</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#e7e5e4;border-bottom:1px solid #ccc;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Border</div>
+          <div class="swatch-hex">#e7e5e4</div>
+          <div class="swatch-role">Dividers, card borders, rules</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:1.1rem;margin:2rem 0 .75rem;color:var(--color-text);">Usage notes</h3>
+    <div class="do-dont">
+      <div class="do">
+        <div class="do-dont-label">Do</div>
+        Use the teal accent sparingly — links, primary CTAs, active indicators, and key data callouts only.
+      </div>
+      <div class="dont">
+        <div class="do-dont-label">Don't</div>
+        Use the accent color for decorative fills, large background areas (except section headers), or more than one CTA per screen.
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 2. TYPOGRAPHY -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="typography">
+    <p class="section-label">02</p>
+    <h2 class="section-title">Typography</h2>
+    <p class="section-desc">
+      Two fonts. Fraunces (optical-size serif) carries personality in headings
+      and display copy. Plus Jakarta Sans handles everything else with geometric
+      clarity. Both are available free via Google Fonts.
+    </p>
+
+    <div class="type-stack">
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="type-meta-name">Display / H1</div>
+          <div class="type-meta-specs">
+            Fraunces 600<br>
+            clamp(2rem, 5vw, 2.75rem)<br>
+            line-height: 1.15<br>
+            letter-spacing: −0.02em
+          </div>
+        </div>
+        <div>
+          <div class="type-specimen-display" style="font-size:clamp(2rem,5vw,2.75rem);font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--color-text);">
+            AI that moves at the speed of your business.
+          </div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="type-meta-name">Heading / H2</div>
+          <div class="type-meta-specs">
+            Fraunces 600<br>
+            1.5rem<br>
+            line-height: 1.25<br>
+            letter-spacing: −0.02em
+          </div>
+        </div>
+        <div>
+          <div class="type-specimen-display" style="font-size:1.5rem;font-weight:600;line-height:1.25;letter-spacing:-.02em;color:var(--color-text);">
+            Built for teams that can't afford to slow down
+          </div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="type-meta-name">Card Title / H3</div>
+          <div class="type-meta-specs">
+            Fraunces 600<br>
+            1.125rem – 1.35rem<br>
+            line-height: 1.3<br>
+            letter-spacing: −0.01em
+          </div>
+        </div>
+        <div>
+          <div class="type-specimen-display" style="font-size:1.2rem;font-weight:600;line-height:1.3;letter-spacing:-.01em;color:var(--color-text);">
+            TeleTrex Transcription
+          </div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="type-meta-name">Eyebrow / Label</div>
+          <div class="type-meta-specs">
+            Plus Jakarta Sans 600<br>
+            0.8125rem (13px)<br>
+            letter-spacing: +0.06em<br>
+            text-transform: uppercase
+          </div>
+        </div>
+        <div>
+          <div class="type-specimen-body" style="font-size:.8125rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent);">
+            Products &nbsp;·&nbsp; Our Solutions
+          </div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="type-meta-name">Body / Prose</div>
+          <div class="type-meta-specs">
+            Plus Jakarta Sans 400<br>
+            1.0625rem (17px)<br>
+            line-height: 1.6
+          </div>
+        </div>
+        <div>
+          <div class="type-specimen-body" style="font-size:1.0625rem;line-height:1.6;color:var(--color-text);">
+            TeleTrex provides AI-powered communication tools tailored for
+            growing teams. From real-time transcription to intelligent
+            scheduling, everything is designed to fit into the way you
+            already work — not the other way around.
+          </div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="type-meta-name">Small / Caption</div>
+          <div class="type-meta-specs">
+            Plus Jakarta Sans 400<br>
+            0.875rem (14px)<br>
+            line-height: 1.55<br>
+            color: text-muted
+          </div>
+        </div>
+        <div>
+          <div class="type-specimen-body" style="font-size:.875rem;line-height:1.55;color:var(--color-text-muted);">
+            Available on all plans. Pricing is per seat, billed monthly or
+            annually. Cancel at any time.
+          </div>
+        </div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-meta">
+          <div class="type-meta-name">Display Italic</div>
+          <div class="type-meta-specs">
+            Fraunces 500 italic<br>
+            Used for pull quotes,<br>
+            testimonials, callouts
+          </div>
+        </div>
+        <div>
+          <blockquote class="pullquote">
+            "The transcription accuracy alone saves us two hours per meeting."
+          </blockquote>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 3. SPACING -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="spacing">
+    <p class="section-label">03</p>
+    <h2 class="section-title">Spacing &amp; Layout</h2>
+    <p class="section-desc">
+      A 4px base unit. Page content is constrained to
+      <code style="font-family:monospace;font-size:.875rem;">max-width: 52rem</code> (832px) with
+      <code style="font-family:monospace;font-size:.875rem;">1.5rem</code> horizontal padding.
+    </p>
+
+    <div class="spacing-grid">
+      <div class="spacing-row">
+        <div class="spacing-label">4px</div>
+        <div class="spacing-bar solid" style="width:4px;"></div>
+        <div class="spacing-desc">Base unit — icon gaps, micro nudges</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">8px</div>
+        <div class="spacing-bar solid" style="width:8px;"></div>
+        <div class="spacing-desc">Tight element spacing, label–input gap</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">12px</div>
+        <div class="spacing-bar solid" style="width:12px;"></div>
+        <div class="spacing-desc">Small internal padding, tag padding</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">16px</div>
+        <div class="spacing-bar solid" style="width:16px;"></div>
+        <div class="spacing-desc">Default gap between related items</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">20px</div>
+        <div class="spacing-bar solid" style="width:20px;"></div>
+        <div class="spacing-desc">Card inner padding (1.25rem)</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">24px</div>
+        <div class="spacing-bar solid" style="width:24px;"></div>
+        <div class="spacing-desc">Card inner padding (1.5rem), section gap</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">32px</div>
+        <div class="spacing-bar solid" style="width:32px;"></div>
+        <div class="spacing-desc">Between components / grid gap</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">48px</div>
+        <div class="spacing-bar solid" style="width:48px;"></div>
+        <div class="spacing-desc">Section top/bottom padding (3rem)</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-label">64px</div>
+        <div class="spacing-bar solid" style="width:64px;"></div>
+        <div class="spacing-desc">Major section separation, hero padding</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:1.1rem;margin:2rem 0 .75rem;color:var(--color-text);">Responsive breakpoints</h3>
+    <table class="token-table">
+      <thead><tr><th>Name</th><th>Value</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td>xs</td><td><code>540px</code></td><td>Single-column nav, stacked hero</td></tr>
+        <tr><td>sm</td><td><code>640px</code></td><td>Two-column card grids unlock</td></tr>
+        <tr><td>md</td><td><code>700px</code></td><td>Pricing columns switch to row</td></tr>
+        <tr><td>lg</td><td><code>900px</code></td><td>Full nav, three-column layouts</td></tr>
+        <tr><td>content</td><td><code>52rem</code></td><td>Max content width (not a breakpoint)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 4. BORDER RADIUS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="radii">
+    <p class="section-label">04</p>
+    <h2 class="section-title">Border Radius</h2>
+    <p class="section-desc">Soft but not bubbly. Corners are rounded just enough to feel approachable without looking toy-like.</p>
+
+    <div class="radius-grid">
+      <div>
+        <div class="radius-swatch" style="border-radius:0px;">
+          <div class="radius-label">0px<br>none</div>
+        </div>
+      </div>
+      <div>
+        <div class="radius-swatch" style="border-radius:4px;">
+          <div class="radius-label">4px<br>xs</div>
+        </div>
+      </div>
+      <div>
+        <div class="radius-swatch" style="border-radius:6px;">
+          <div class="radius-label">6px<br>sm</div>
+        </div>
+      </div>
+      <div>
+        <div class="radius-swatch" style="border-radius:8px;">
+          <div class="radius-label">8px<br>btn</div>
+        </div>
+      </div>
+      <div>
+        <div class="radius-swatch" style="border-radius:12px;">
+          <div class="radius-label">12px<br>card</div>
+        </div>
+      </div>
+      <div>
+        <div class="radius-swatch" style="border-radius:14px;">
+          <div class="radius-label">14px<br>banner</div>
+        </div>
+      </div>
+      <div>
+        <div class="radius-swatch" style="border-radius:9999px;width:6rem;height:6rem;">
+          <div class="radius-label">9999px<br>pill/tag</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 5. SHADOWS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="shadows">
+    <p class="section-label">05</p>
+    <h2 class="section-title">Shadows &amp; Elevation</h2>
+    <p class="section-desc">Shadows use warm-tinted blacks (derived from the text color), not cold grays. Keep the system restrained — surfaces feel lifted, not heavy.</p>
+
+    <div class="shadow-grid">
+      <div class="shadow-card" style="box-shadow:0 1px 2px rgba(28,25,23,.04);">
+        <div class="shadow-name">Card (default)</div>
+        <div class="shadow-val">0 1px 2px rgba(28,25,23,.04)</div>
+      </div>
+      <div class="shadow-card" style="box-shadow:0 4px 16px rgba(15,118,110,.12);">
+        <div class="shadow-name">Card Hover</div>
+        <div class="shadow-val">0 4px 16px rgba(15,118,110,.12)</div>
+      </div>
+      <div class="shadow-card" style="box-shadow:0 8px 24px rgba(28,25,23,.08);">
+        <div class="shadow-name">Dropdown / Float</div>
+        <div class="shadow-val">0 8px 24px rgba(28,25,23,.08)</div>
+      </div>
+      <div class="shadow-card" style="box-shadow:0 4px 6px -1px rgba(28,25,23,.07),0 12px 32px -4px rgba(28,25,23,.12);">
+        <div class="shadow-name">Modal / Banner</div>
+        <div class="shadow-val">0 4px 6px -1px … 0 12px 32px -4px …</div>
+      </div>
+      <div class="shadow-card" style="box-shadow:0 0 0 1px rgba(15,118,110,.15);">
+        <div class="shadow-name">Featured Ring</div>
+        <div class="shadow-val">0 0 0 1px rgba(15,118,110,.15)</div>
+      </div>
+      <div class="shadow-card" style="box-shadow:0 1px 2px rgba(28,25,23,.08);">
+        <div class="shadow-name">Button</div>
+        <div class="shadow-val">0 1px 2px rgba(28,25,23,.08)</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 6. BUTTONS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="buttons">
+    <p class="section-label">06</p>
+    <h2 class="section-title">Buttons</h2>
+    <p class="section-desc">Three variants. Use at most one primary CTA per visual section.</p>
+
+    <div class="btn-row">
+      <a href="#" class="btn btn-primary">Get started</a>
+      <a href="#" class="btn btn-outline">Learn more</a>
+      <a href="#" class="btn btn-ghost">View docs →</a>
+    </div>
+    <div class="btn-row">
+      <a href="#" class="btn btn-primary btn-sm">Small primary</a>
+      <a href="#" class="btn btn-outline btn-sm">Small outline</a>
+    </div>
+    <div class="btn-row">
+      <a href="#" class="btn btn-primary btn-lg">Large primary</a>
+      <a href="#" class="btn btn-outline btn-lg">Large outline</a>
+    </div>
+
+    <table class="token-table" style="margin-top:1.5rem;">
+      <thead><tr><th>Variant</th><th>Use</th><th>Size</th></tr></thead>
+      <tbody>
+        <tr><td>Primary</td><td>Main CTA — sign up, get started, buy</td><td>sm / default / lg</td></tr>
+        <tr><td>Outline</td><td>Secondary action on same surface as primary</td><td>sm / default / lg</td></tr>
+        <tr><td>Ghost</td><td>Tertiary / navigation-like actions</td><td>default only</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 7. CARDS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="cards">
+    <p class="section-label">07</p>
+    <h2 class="section-title">Cards</h2>
+    <p class="section-desc">Standard white surface with a barely-there shadow. Hover reveals a teal-tinted lift. Featured cards use a teal ring.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-eyebrow">Transcription</div>
+        <div class="card-title">Real-time meeting notes</div>
+        <div class="card-body">Accurate, speaker-attributed transcripts delivered seconds after your meeting ends.</div>
+      </div>
+      <div class="card card-featured">
+        <div class="card-eyebrow">★ Most popular</div>
+        <div class="card-title">TeleTrex Scheduling</div>
+        <div class="card-body">Intelligent scheduling that reads context and proposes optimal meeting windows.</div>
+      </div>
+      <div class="card">
+        <div class="card-eyebrow">Analytics</div>
+        <div class="card-title">Communication insights</div>
+        <div class="card-body">Understand how your team communicates and where time is being spent.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 8. NAVIGATION -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="navigation">
+    <p class="section-label">08</p>
+    <h2 class="section-title">Navigation</h2>
+    <p class="section-desc">Text-only brand mark in Fraunces. Nav links in Plus Jakarta Sans medium. Active state: 2px teal underline.</p>
+
+    <div class="nav-specimen">
+      <span class="nav-brand">TeleTrex</span>
+      <a href="#" class="nav-link active">Products</a>
+      <a href="#" class="nav-link">Pricing</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Blog</a>
+      <a href="#" class="btn btn-primary btn-sm" style="margin-left:auto;">Get started</a>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 9. FORMS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="forms">
+    <p class="section-label">09</p>
+    <h2 class="section-title">Form Elements</h2>
+    <p class="section-desc">Warm-bordered inputs. Focus ring uses accent color at 12% opacity. Never use a border-only focus style — it fails contrast.</p>
+
+    <div class="form-demo">
+      <div>
+        <label class="form-label">Email address</label>
+        <input class="form-input" type="email" placeholder="you@company.com">
+        <p class="form-hint">We'll never share your email with anyone.</p>
+      </div>
+      <div>
+        <label class="form-label">Company name</label>
+        <input class="form-input" type="text" placeholder="Acme Inc.">
+      </div>
+      <a href="#" class="btn btn-primary" style="align-self:flex-start;">Request access</a>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 10. TAGS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="tags">
+    <p class="section-label">10</p>
+    <h2 class="section-title">Tags &amp; Badges</h2>
+    <p class="section-desc">Pill shape (border-radius: 9999px). Three variants for different semantic weights.</p>
+
+    <div class="tag-row">
+      <span class="tag tag-accent">AI-powered</span>
+      <span class="tag tag-accent">New</span>
+      <span class="tag tag-neutral">Beta</span>
+      <span class="tag tag-neutral">Transcription</span>
+      <span class="tag tag-surface">Enterprise</span>
+      <span class="tag tag-surface">Coming soon</span>
+    </div>
+
+    <table class="token-table" style="margin-top:1.5rem;">
+      <thead><tr><th>Variant</th><th>Background</th><th>Text</th><th>Use for</th></tr></thead>
+      <tbody>
+        <tr><td>Accent</td><td>rgba(15,118,110,.10)</td><td>#0f766e</td><td>Features, categories, "new" labels</td></tr>
+        <tr><td>Neutral</td><td>#e7e5e4</td><td>#57534e</td><td>Status, plans, content types</td></tr>
+        <tr><td>Surface</td><td>#ffffff + border</td><td>#57534e</td><td>Quiet metadata, availability</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 11. PATTERNS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="patterns">
+    <p class="section-label">11</p>
+    <h2 class="section-title">Patterns &amp; Motifs</h2>
+    <p class="section-desc">Recurring layout and visual idioms that make TeleTrex pages feel cohesive.</p>
+
+    <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:.75rem;color:var(--color-text);">CTA band</h3>
+    <div class="cta-band">
+      <h3>Ready to move faster?</h3>
+      <p>Join hundreds of teams already using TeleTrex to eliminate communication overhead.</p>
+      <div class="btn-row" style="justify-content:center;margin-bottom:0;">
+        <a href="#" class="btn btn-primary">Start free trial</a>
+        <a href="#" class="btn btn-outline">Talk to sales</a>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:1.1rem;margin:2rem 0 .75rem;color:var(--color-text);">Links</h3>
+    <p class="link-demo">
+      Inline links use accent color with an <a href="#">invisible underline that appears on hover</a>.
+      Font weight stays at the parent's weight — do not bold links mid-sentence.
+    </p>
+
+    <h3 style="font-family:var(--font-display);font-size:1.1rem;margin:2rem 0 .75rem;color:var(--color-text);">Transition timing</h3>
+    <p style="font-size:.9375rem;color:var(--color-text-muted);">
+      All interactive transitions use <code style="font-family:monospace;background:rgba(28,25,23,.05);padding:.1rem .35rem;border-radius:3px;">transition: 0.15s ease</code>.
+      Apply to: <code style="font-family:monospace;background:rgba(28,25,23,.05);padding:.1rem .35rem;border-radius:3px;">color, background-color, box-shadow, border-color, opacity, text-decoration-color</code>.
+    </p>
+
+    <h3 style="font-family:var(--font-display);font-size:1.1rem;margin:2rem 0 .75rem;color:var(--color-text);">Logo watermark</h3>
+    <p style="font-size:.9375rem;color:var(--color-text-muted);">
+      The inverted transparent logo is used as a full-page watermark via <code style="font-family:monospace;background:rgba(28,25,23,.05);padding:.1rem .35rem;border-radius:3px;">body::before</code>
+      at <code style="font-family:monospace;background:rgba(28,25,23,.05);padding:.1rem .35rem;border-radius:3px;">min(640px, 120vmin)</code> size, centered, <code style="font-family:monospace;background:rgba(28,25,23,.05);padding:.1rem .35rem;border-radius:3px;">opacity: 0.8</code>.
+      Asset: <code style="font-family:monospace;background:rgba(28,25,23,.05);padding:.1rem .35rem;border-radius:3px;">teletrex large inverted transparent.png</code>
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 12. CSS TOKENS -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="tokens">
+    <p class="section-label">12</p>
+    <h2 class="section-title">CSS Design Tokens</h2>
+    <p class="section-desc">Copy this <code style="font-family:monospace;font-size:.875rem;">:root</code> block into any project to inherit the full TeleTrex system.</p>
+
+    <pre style="background:var(--color-text);color:#f0fdfa;border-radius:var(--radius-card);padding:1.5rem 1.75rem;font-family:'SF Mono','Fira Code',monospace;font-size:.8125rem;line-height:1.8;overflow-x:auto;"><code>:root {
+  /* Colour */
+  --color-bg:           #faf8f5;
+  --color-surface:      #ffffff;
+  --color-text:         #1c1917;
+  --color-text-muted:   #57534e;
+  --color-accent:       #0f766e;
+  --color-accent-hover: #0d9488;
+  --color-border:       #e7e5e4;
+  --color-light-teal:   #f0fdfa;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Border radius */
+  --radius-sm:   0.375rem;   /*  6px */
+  --radius-btn:  0.5rem;     /*  8px */
+  --radius-card: 0.75rem;    /* 12px */
+  --radius-lg:   0.875rem;   /* 14px */
+
+  /* Shadows */
+  --shadow-card:   0 1px 2px rgba(28,25,23,.04);
+  --shadow-float:  0 8px 24px rgba(28,25,23,.08);
+  --shadow-deep:   0 4px 6px -1px rgba(28,25,23,.07),
+                   0 12px 32px -4px rgba(28,25,23,.12);
+  --shadow-accent: 0 0 0 1px rgba(15,118,110,.15);
+  --shadow-btn:    0 1px 2px rgba(28,25,23,.08);
+
+  /* Motion */
+  --transition: 0.15s ease;
+
+  /* Layout */
+  --max-width: 52rem;
+}</code></pre>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- 13. VOICE & TONE -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="voice">
+    <p class="section-label">13</p>
+    <h2 class="section-title">Voice &amp; Tone</h2>
+    <p class="section-desc">How TeleTrex sounds in words mirrors how it looks visually — precise, warm, and never overblown.</p>
+
+    <div class="do-dont" style="margin-bottom:1.5rem;">
+      <div class="do">
+        <div class="do-dont-label">Do</div>
+        <strong>Direct &amp; confident.</strong> "Accurate transcripts, seconds after your call ends."<br><br>
+        <strong>Warm but not casual.</strong> "We built this because we were tired of taking notes."<br><br>
+        <strong>Specific.</strong> Name the benefit, not the feature. "Save two hours per meeting" beats "advanced AI processing."
+      </div>
+      <div class="dont">
+        <div class="do-dont-label">Don't</div>
+        <strong>Hype language.</strong> Avoid "revolutionary," "game-changing," "disruptive," or "10×."<br><br>
+        <strong>Jargon for its own sake.</strong> Don't lead with tech — lead with the outcome.<br><br>
+        <strong>Passive voice.</strong> "Meeting notes are generated" → "We generate your meeting notes."
+      </div>
+    </div>
+
+    <table class="token-table">
+      <thead><tr><th>Attribute</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td>Confident</td><td>States outcomes clearly. No hedging or excessive qualifiers.</td></tr>
+        <tr><td>Precise</td><td>Prefers specific numbers and concrete benefits over vague claims.</td></tr>
+        <tr><td>Warm</td><td>Human, not corporate. Acknowledges real problems teams face.</td></tr>
+        <tr><td>Economical</td><td>Short sentences. No filler. Every word earns its place.</td></tr>
+        <tr><td>Trustworthy</td><td>Never oversells. Lets the product speak through specifics.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div style="height:4rem;"></div>
+
+</div><!-- /wrap -->
+
+<!-- footer -->
+<div style="background:var(--color-text);padding:2.5rem 0;margin-top:2rem;">
+  <div style="max-width:52rem;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+    <span style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:#fff;">TeleTrex</span>
+    <span style="font-size:.875rem;color:#a8a29e;">Style Guide v1.0 — April 2026</span>
+  </div>
+</div>
+
+</body>
+</html>
