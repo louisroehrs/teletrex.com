@@ -3,21 +3,36 @@ import { SITE_NAME } from '../config/site';
 ---
 
 <footer class="site-footer">
-	<p class="site-footer__brand">{SITE_NAME}</p>
-	<p class="site-footer__meta">
-		AI solutions for freeing businesses from support costs to accelerated revenue growth.
-  </p>
-  	<p class="site-footer__meta">
-		Follow us on <a href="https://linkedin.com/teletrex">LinkedIn</a>.
-  </p>
+  <div class="site-footer__grid">   
+    <div class="site-footer__logo">
+      <img src="/teletrex.png" width=140></img>
+    </div>
+    <div>
+     	<p class="site-footer__brand">{SITE_NAME}</p>
+     	<p class="site-footer__meta">
+      		AI solutions for freeing businesses from support costs to accelerated revenue growth.
+      </p>
+  	  <p class="site-footer__meta">
+      		Follow us on <a href="https://linkedin.com/company/teletrex">LinkedIn</a>.
+      </p>
+    </div>
+  </div>  
+
   <br/>
  	<p class="site-footer__meta">
-    Designed and Built in Mountain View, California.
+    Headquartered, Designed, and Built in Mountain View, California.
 	</p>
   <br/>  <br/>  <br/>  <br/>
 </footer>
 
 <style>
+
+  .site-footer__grid {
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+  }
+  
 	.site-footer {
 		margin-top: 3rem;
 		padding-top: 2rem;

@@ -13,17 +13,18 @@ import { BOOK_CALL_URL } from '../config/site';
 			<section class="hero">
 				<p class="eyebrow">For startups &amp; growing businesses</p>
 				<h1>Scale operations without scaling overhead.</h1>
-				<p class="subhead">
-					Fast, friendly AI that shortens the path from interest to customer—and cuts repetitive
-					hand-holding.
+        <p class="subhead">
+        AI solutions for freeing businesses from support costs to accelerated revenue growth.
+        </p>
+				<p class="lead">
+					We provide fast, friendly, AI-based solutions designed to shorten the path from interest to customer and cuts repetitive hand-holding pre and post conversion online. 
 				</p>
 				<p class="lead">
-					No jargon required: we focus on the business pain, then build something your team can
-					actually use.
+					We focus on the best experience for eliminating the business pain, then build a solution that helps your prospects and customers while you work on the next big thing.
 				</p>
 				<div class="card hero__actions">
 					<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call</a>
-					<p class="hero__note">Free intro. We’ll ask what’s slowing you down and what “good” looks like.</p>
+					<p class="hero__note">Let's have a first talk. We’ll work with you to find the best area to attack and show what could be.</p>
 				</div>
 			</section>
 
@@ -33,8 +34,7 @@ import { BOOK_CALL_URL } from '../config/site';
 					<li class="card">
 						<h3>Leads go cold while you’re in meetings</h3>
 						<p>
-							Prospects ask the same questions over email and DMs. By the time someone replies, they’ve
-							moved on.
+							Prospects ask the same questions over the phone, email and DMs. By the time someone replies, they’ve moved on.
 						</p>
 					</li>
 					<li class="card">
@@ -55,9 +55,23 @@ import { BOOK_CALL_URL } from '../config/site';
 			</section>
 
 			<section class="section section--tint" aria-labelledby="help-heading">
+				<h2 id="help-heading">What we do</h2>
+				<p class="section__intro">
+                Augment your online support with an intelligent search on your site that not only handles customer questions, but also carries out tasks that used to require support people to complete.  Free your support team to handle the more complex issues while your new search bar exceeds customer expectations. Customers don't need to navigate your site when the TeleTrex Associate in your search bar can handle most any request.
+						</p>
+				<p class="section__intro">
+                View analytics to see what your customers and prospects are asking and wanting to do.  See how each inquiry was handled and which were escalated to support to proactively learn and handle more inquiry types over time.
+						</p>
+					</li>
+				</ul>
+			</section>
+
+			<section class="section section--tint" aria-labelledby="help-heading">
 				<h2 id="help-heading">What we build</h2>
 				<p class="section__intro">
-					Practical AI assistants and workflows—trained on how <em>you</em> talk to customers and run the
+
+
+					Practical AI assistants and workflows trained on how <em>you</em> talk to customers and run the
 					business. The goal is simple: faster answers, fewer dropped balls, and a lighter load on your
 					team.
 				</p>
@@ -67,19 +81,21 @@ import { BOOK_CALL_URL } from '../config/site';
 						bounce.
 					</li>
 					<li>
-						<strong>Consistent, on-brand answers</strong> — 24/7 where it helps, with guardrails so nothing
-						wild goes out the door.
+						<strong>Consistent, on-brand answers</strong> — 24/7 where it helps, with guardrails so conversations are always redirected politely back to your business. 
 					</li>
 					<li>
 						<strong>Connected to how you already work</strong> — email, forms, your site, or the tools you
 						already use (we’ll keep it straightforward).
 					</li>
+					<li>
+						<strong>Secure</strong> — your data stays onsite. Our 26 years of experience securing Fortune 500 data is leveraged to provide the utmost in data security.
+					</li>
 				</ul>
 			</section>
 
 			<section class="cta-band" aria-labelledby="cta-heading">
-				<h2 id="cta-heading">Call us and let's discover an improved reality.</h2>
-				<p>No pressure pitch. If we’re not the right fit, we’ll say so.</p>
+				<h2 id="cta-heading">Call us and let's discover an improved, scalable reality.</h2>
+				<p>If we’re not the right fit, we’ll say so.</p>
 				<a class="btn btn--primary btn--large" href={BOOK_CALL_URL}>Book a call</a>
 			</section>
 		</main>
@@ -90,7 +106,7 @@ import { BOOK_CALL_URL } from '../config/site';
 
 <style>
 	.page {
-		max-width: 52rem;
+		max-width: 58rem;
 		margin: 0 auto;
 		padding: 1.25rem 1.5rem 3rem;
 	}
@@ -101,11 +117,13 @@ import { BOOK_CALL_URL } from '../config/site';
 
 	.eyebrow {
 		margin: 0 0 0.75rem;
-		font-size: 0.8125rem;
+    font-family: 'Plus Jakarta Sans';
+		font-size: 0.98125rem;
 		font-weight: 600;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		color: var(--color-accent);
+
 	}
 
 	.hero h1 {
@@ -205,12 +223,13 @@ import { BOOK_CALL_URL } from '../config/site';
 		padding: 2.5rem 1.5rem;
 		border: 1px solid var(--color-border);
 		border-radius: 0.75rem;
+    margin-bottom: 2.5rem;
 	}
 
 	.section__intro {
 		margin: 0 0 1.25rem;
 		color: var(--color-text-muted);
-		max-width: 42rem;
+
 	}
 
 	.section__intro em {
@@ -249,7 +268,7 @@ import { BOOK_CALL_URL } from '../config/site';
 
 	.cta-band h2 {
 		margin: 0 0 0.5rem;
-		font-family: var(--font-display);
+		font-family: var(--font-cta);
 		font-weight: 600;
 		font-size: 1.35rem;
 		letter-spacing: -0.02em;
