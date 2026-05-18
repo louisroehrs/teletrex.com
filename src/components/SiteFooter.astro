@@ -1,58 +1,95 @@
 ---
 import { SITE_NAME } from '../config/site';
+
+const FOUNDED = 1980;
+const currentYear = new Date().getFullYear();
+const copyrightYear = currentYear > FOUNDED ? `${FOUNDED}–${currentYear}` : FOUNDED;
 ---
 
 <footer class="site-footer">
-  <div class="site-footer__grid">   
-    <div class="site-footer__logo">
-      <img src="/teletrex.png" width=140></img>
-    </div>
-    <div>
-     	<p class="site-footer__brand">{SITE_NAME}</p>
-     	<p class="site-footer__meta">
-      		AI solutions for freeing businesses from support costs to accelerated revenue growth.
-      </p>
-  	  <p class="site-footer__meta">
-      		Follow us on <a href="https://linkedin.com/company/teletrex">LinkedIn</a>.
-      </p>
-    </div>
-  </div>  
-
-  <br/>
- 	<p class="site-footer__meta">
-    Headquartered, Designed, and Built in Mountain View, California.
-	</p>
-  <br/>  <br/>  <br/>  <br/>
+	<div class="site-footer__inner">
+		<div class="site-footer__brand-col">
+			<img src="/teletrex.png" width="120" alt={SITE_NAME} class="site-footer__logo" />
+			<p class="site-footer__tagline">
+				AI solutions that free businesses from support costs and accelerate revenue growth.
+			</p>
+		</div>
+		<div class="site-footer__links">
+			<a href="/products">Products</a>
+			<a href="/pricing">Pricing</a>
+			<a href="/case-studies">Case Studies</a>
+			<a href="/about">About</a>
+			<a href="/contact">Contact</a>
+			<a href="https://linkedin.com/company/teletrex">LinkedIn ↗</a>
+		</div>
+	</div>
+	<div class="site-footer__bottom">
+		<p>© {copyrightYear} {SITE_NAME}. Headquartered, designed, and built in Mountain View, California.</p>
+	</div>
 </footer>
 
 <style>
-
-  .site-footer__grid {
-    display: flex;
-    width:100%;
-    justify-content: space-evenly;
-  }
-  
 	.site-footer {
-		margin-top: 3rem;
-		padding-top: 2rem;
 		border-top: 1px solid var(--color-border);
-		text-align: center;
+		padding: 3rem 1.5rem 2rem;
+		max-width: 72rem;
+		margin: 0 auto;
 	}
 
-	.site-footer__brand {
-		margin: 0 0 0.35rem;
-		font-family: var(--font-display);
-		font-weight: 600;
-		font-size: 1.0625rem;
+	.site-footer__inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 2.5rem;
 	}
 
-	.site-footer__meta {
+	.site-footer__brand-col {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		max-width: 22rem;
+	}
+
+	.site-footer__logo {
+		display: block;
+		height: auto;
+	}
+
+	.site-footer__tagline {
 		margin: 0;
-		font-size: 0.875rem;
+		font-size: 0.9rem;
+		line-height: 1.6;
 		color: var(--color-text-muted);
-		max-width: 28rem;
-		margin-left: auto;
-		margin-right: auto;
+	}
+
+	.site-footer__links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.5rem;
+		align-items: flex-start;
+	}
+
+	.site-footer__links a {
+		font-size: 0.9rem;
+		color: var(--color-text-muted);
+		text-decoration: none;
+		transition: color 0.15s ease;
+	}
+
+	.site-footer__links a:hover {
+		color: var(--color-accent);
+	}
+
+	.site-footer__bottom {
+		border-top: 1px solid var(--color-border);
+		padding-top: 1.5rem;
+	}
+
+	.site-footer__bottom p {
+		margin: 0;
+		font-size: 0.8125rem;
+		color: var(--color-text-muted);
 	}
 </style>

@@ -13,8 +13,8 @@ const pageTitle = `${title} · TeleTrex`;
 ---
 
 <Layout title={pageTitle} description={description}>
+	<SiteHeader />
 	<div class="page">
-		<SiteHeader />
 		<main class="inner-main">
 			<slot />
 		</main>
@@ -26,7 +26,7 @@ const pageTitle = `${title} · TeleTrex`;
 	.page {
 		max-width: 52rem;
 		margin: 0 auto;
-		padding: 1.25rem 1.5rem 3rem;
+		padding: 2rem 1.5rem 3rem;
 	}
 
 	.inner-main :global(h1) {
