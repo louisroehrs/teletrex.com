@@ -6,278 +6,513 @@ import { BOOK_CALL_URL } from '../config/site';
 ---
 
 <Layout>
-	<div class="page">
-		<SiteHeader />
+	<SiteHeader />
 
-		<main>
-			<section class="hero">
-				<p class="eyebrow">For startups &amp; growing businesses</p>
-				<h1>Scale operations without scaling overhead.</h1>
-        <p class="subhead">
-        AI solutions for freeing businesses from support costs to accelerated revenue growth.
-        </p>
-				<p class="lead">
-					We provide fast, friendly, AI-based solutions designed to shorten the path from interest to customer and cuts repetitive hand-holding pre and post conversion online. 
+	<main>
+
+		<!-- ── HERO ──────────────────────────────────────────────────────── -->
+		<section class="hero">
+			<div class="hero__inner">
+				<p class="eyebrow">
+					<span class="eyebrow__dot"></span>
+					AI for startups &amp; growing businesses
 				</p>
-				<p class="lead">
-					We focus on the best experience for eliminating the business pain, then build a solution that helps your prospects and customers while you work on the next big thing.
+				<h1>Scale operations.<br>Not overhead.</h1>
+				<p class="subhead">
+					Practical AI assistants that handle customer questions, convert more leads,
+					and free your team to focus on what actually matters.
 				</p>
-				<div class="card hero__actions">
-					<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call</a>
-					<p class="hero__note">Let's have a first talk. We’ll work with you to find the best area to attack and show what could be.</p>
+				<div class="hero__actions">
+					<a class="btn btn--primary hero__btn" href={BOOK_CALL_URL}>Book a call →</a>
+					<p class="hero__note">No commitment. We'll tell you if it's not a fit.</p>
 				</div>
-			</section>
+			</div>
+		</section>
 
-			<section class="section" aria-labelledby="pains-heading">
-				<h2 id="pains-heading">Sound familiar?</h2>
-				<ul class="cards">
-					<li class="card">
-						<h3>Leads go cold while you’re in meetings</h3>
+		<!-- ── TRUST BAR ─────────────────────────────────────────────────── -->
+		<div class="trust-bar">
+			<div class="trust-bar__inner">
+				<div class="trust-item">
+					<strong>26 yrs</strong> security expertise
+				</div>
+				<span class="trust-sep" aria-hidden="true">·</span>
+				<div class="trust-item">
+					<strong>Fortune 500</strong> data protection standards
+				</div>
+				<span class="trust-sep" aria-hidden="true">·</span>
+				<div class="trust-item">
+					<strong>24/7</strong> AI availability
+				</div>
+				<span class="trust-sep" aria-hidden="true">·</span>
+				<div class="trust-item">
+					<strong>Mountain View, CA</strong>
+				</div>
+			</div>
+		</div>
+
+		<!-- ── PAIN POINTS ───────────────────────────────────────────────── -->
+		<section class="section pains" aria-labelledby="pains-heading">
+			<div class="section__inner">
+				<p class="section__eyebrow">Sound familiar?</p>
+				<h2 id="pains-heading">The cost of staying manual</h2>
+				<ul class="pain-cards">
+					<li class="pain-card">
+						<span class="pain-card__num">01</span>
+						<h3>Leads go cold while you're in meetings</h3>
 						<p>
-							Prospects ask the same questions over the phone, email and DMs. By the time someone replies, they’ve moved on.
+							Prospects ask the same questions across phone, email, and DMs.
+							By the time someone replies, they've moved on.
 						</p>
 					</li>
-					<li class="card">
+					<li class="pain-card">
+						<span class="pain-card__num">02</span>
 						<h3>Your best people are stuck repeating themselves</h3>
 						<p>
-							Pricing, onboarding, “how does this work?”—it adds up. That’s time not spent selling,
-							serving, or shipping.
+							Pricing, onboarding, "how does this work?" — it adds up.
+							That's time not spent selling, serving, or shipping.
 						</p>
 					</li>
-					<li class="card">
+					<li class="pain-card">
+						<span class="pain-card__num">03</span>
 						<h3>Growth feels expensive</h3>
 						<p>
-							Hiring for every extra conversation doesn’t scale. You need leverage without a huge new
-							headcount line.
+							Hiring for every extra conversation doesn't scale.
+							You need leverage without a new headcount line.
 						</p>
 					</li>
 				</ul>
-			</section>
+			</div>
+		</section>
 
-			<section class="section section--tint" aria-labelledby="help-heading">
-				<h2 id="help-heading">What we do</h2>
-				<p class="section__intro">
-                Augment your online support with an intelligent search on your site that not only handles customer questions, but also carries out tasks that used to require support people to complete.  Free your support team to handle the more complex issues while your new search bar exceeds customer expectations. Customers don't need to navigate your site when the TeleTrex Associate in your search bar can handle most any request.
-						</p>
-				<p class="section__intro">
-                View analytics to see what your customers and prospects are asking and wanting to do.  See how each inquiry was handled and which were escalated to support to proactively learn and handle more inquiry types over time.
-						</p>
-					</li>
-				</ul>
-			</section>
-
-			<section class="section section--tint" aria-labelledby="help-heading">
-				<h2 id="help-heading">What we build</h2>
-				<p class="section__intro">
-
-
-					Practical AI assistants and workflows trained on how <em>you</em> talk to customers and run the
-					business. The goal is simple: faster answers, fewer dropped balls, and a lighter load on your
-					team.
+		<!-- ── WHAT WE DELIVER ───────────────────────────────────────────── -->
+		<section class="section features" aria-labelledby="features-heading">
+			<div class="section__inner">
+				<p class="section__eyebrow">What we deliver</p>
+				<h2 id="features-heading">AI built around how<br><em>you</em> talk to customers</h2>
+				<p class="section__lead">
+					We study your business first, then build assistants and workflows that fit
+					into how you already work — not the other way around.
 				</p>
-				<ul class="bullets">
-					<li>
-						<strong>Clear next steps for leads and customers</strong> — so fewer conversations stall or
-						bounce.
-					</li>
-					<li>
-						<strong>Consistent, on-brand answers</strong> — 24/7 where it helps, with guardrails so conversations are always redirected politely back to your business. 
-					</li>
-					<li>
-						<strong>Connected to how you already work</strong> — email, forms, your site, or the tools you
-						already use (we’ll keep it straightforward).
-					</li>
-					<li>
-						<strong>Secure</strong> — your data stays onsite. Our 26 years of experience securing Fortune 500 data is leveraged to provide the utmost in data security.
-					</li>
-				</ul>
-			</section>
+				<div class="feature-grid">
+					<div class="feature">
+						<div class="feature__icon">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+						</div>
+						<h3>Intelligent site search</h3>
+						<p>
+							The TeleTrex Associate in your search bar handles questions and completes
+							tasks that used to require a support person — 24/7, on-brand.
+						</p>
+					</div>
+					<div class="feature">
+						<div class="feature__icon">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+						</div>
+						<h3>Lead &amp; conversion flow</h3>
+						<p>
+							Consistent, on-brand responses that move prospects to the next step —
+							with guardrails so conversations always stay on point.
+						</p>
+					</div>
+					<div class="feature">
+						<div class="feature__icon">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+						</div>
+						<h3>Analytics visibility</h3>
+						<p>
+							See what customers and prospects are asking in real time.
+							Know which inquiries were escalated and why, then close the gaps.
+						</p>
+					</div>
+					<div class="feature">
+						<div class="feature__icon">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+						</div>
+						<h3>Enterprise-grade security</h3>
+						<p>
+							Your data stays on your infrastructure. 26 years of Fortune 500
+							security experience baked into every deployment.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-			<section class="cta-band" aria-labelledby="cta-heading">
-				<h2 id="cta-heading">Call us and let's discover an improved, scalable reality.</h2>
-				<p>If we’re not the right fit, we’ll say so.</p>
-				<a class="btn btn--primary btn--large" href={BOOK_CALL_URL}>Book a call</a>
-			</section>
-		</main>
+		<!-- ── CTA BAND ──────────────────────────────────────────────────── -->
+		<section class="cta-band" aria-labelledby="cta-heading">
+			<div class="cta-band__inner">
+				<p class="cta-band__eyebrow">Ready to explore it?</p>
+				<h2 id="cta-heading">Let's find what to fix first.</h2>
+				<p>If we're not the right fit, we'll say so.</p>
+				<a class="btn btn--primary cta-band__btn" href={BOOK_CALL_URL}>Book a call →</a>
+			</div>
+		</section>
 
-		<SiteFooter />
-	</div>
+	</main>
+
+	<SiteFooter />
 </Layout>
 
 <style>
-	.page {
-		max-width: 58rem;
-		margin: 0 auto;
-		padding: 1.25rem 1.5rem 3rem;
+
+	/* ── Hero ──────────────────────────────────────────────────────────── */
+	.hero {
+		background:
+			radial-gradient(ellipse 80% 55% at 50% -5%, rgba(15, 118, 110, 0.38) 0%, transparent 62%),
+			var(--color-dark);
+		position: relative;
+		overflow: hidden;
+		padding: 5.5rem 1.5rem 5rem;
 	}
 
-	.hero {
-		padding-bottom: 3rem;
+	.hero::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+		background-size: 28px 28px;
+		pointer-events: none;
+	}
+
+	.hero__inner {
+		position: relative;
+		z-index: 1;
+		max-width: 58rem;
+		margin: 0 auto;
 	}
 
 	.eyebrow {
-		margin: 0 0 0.75rem;
-    font-family: 'Plus Jakarta Sans';
-		font-size: 0.98125rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.55rem;
+		background: rgba(15, 118, 110, 0.18);
+		border: 1px solid rgba(45, 212, 191, 0.3);
+		color: var(--color-accent-bright);
+		font-family: var(--font-cta);
+		font-size: 0.8125rem;
 		font-weight: 600;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
-		color: var(--color-accent);
+		padding: 0.3rem 0.9rem 0.3rem 0.65rem;
+		border-radius: 999px;
+		margin-bottom: 1.75rem;
+	}
 
+	.eyebrow__dot {
+		display: inline-block;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: var(--color-accent-bright);
+		box-shadow: 0 0 8px var(--color-accent-bright);
+		flex-shrink: 0;
 	}
 
 	.hero h1 {
-		margin: 0 0 1rem;
+		margin: 0 0 1.25rem;
 		font-family: var(--font-display);
 		font-weight: 600;
-		font-size: clamp(2rem, 5vw, 2.75rem);
-		line-height: 1.15;
-		letter-spacing: -0.02em;
-		color: var(--color-text);
+		font-size: clamp(2.75rem, 6.5vw, 4.5rem);
+		line-height: 1.06;
+		letter-spacing: -0.03em;
+		color: #ffffff;
 	}
 
 	.subhead {
-		margin: 0 0 0.75rem;
-		font-size: 1.2rem;
-		line-height: 1.5;
-		color: var(--color-text);
-		font-weight: 500;
-		max-width: 36rem;
-	}
-
-	.lead {
-		margin: 0 0 1.75rem;
-		font-size: 1.0625rem;
-		line-height: 1.65;
-		color: var(--color-text-muted);
-		max-width: 40rem;
+		margin: 0 0 2.25rem;
+		font-size: clamp(1rem, 2vw, 1.1875rem);
+		line-height: 1.6;
+		color: rgba(255, 255, 255, 0.62);
+		max-width: 38rem;
 	}
 
 	.hero__actions {
 		display: flex;
-		flex-direction: row;
 		align-items: center;
-		gap: 2rem;
+		gap: 1rem 2rem;
+		flex-wrap: wrap;
+	}
+
+	.hero__btn {
+		padding: 0.8rem 1.6rem;
+		font-size: 1rem;
+		box-shadow: 0 0 0 1px rgba(15, 118, 110, 0.45), 0 4px 20px rgba(15, 118, 110, 0.3);
+		transition: background 0.15s ease, box-shadow 0.15s ease;
+	}
+
+	.hero__btn:hover {
+		background: var(--color-accent-hover);
+		box-shadow: 0 0 0 1px rgba(15, 118, 110, 0.6), 0 6px 28px rgba(15, 118, 110, 0.4);
 	}
 
 	.hero__note {
 		margin: 0;
 		font-size: 0.875rem;
-		color: var(--color-text-muted);
-		max-width: 21em;
+		color: rgba(255, 255, 255, 0.38);
 	}
 
+	/* ── Trust bar ─────────────────────────────────────────────────────── */
+	.trust-bar {
+		background: var(--color-surface);
+		border-bottom: 1px solid var(--color-border);
+		padding: 0.85rem 1.5rem;
+	}
+
+	.trust-bar__inner {
+		max-width: 58rem;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 0.4rem 1.25rem;
+	}
+
+	.trust-item {
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		white-space: nowrap;
+	}
+
+	.trust-item strong {
+		color: var(--color-text);
+		font-weight: 600;
+	}
+
+	.trust-sep {
+		color: var(--color-border);
+		font-size: 1rem;
+		line-height: 1;
+	}
+
+	/* ── Shared section scaffolding ────────────────────────────────────── */
 	.section {
-		padding: 2.5rem 0;
-		border-top: 1px solid var(--color-border);
+		padding: 4.5rem 1.5rem;
+	}
+
+	.section__inner {
+		max-width: 58rem;
+		margin: 0 auto;
+	}
+
+	.section__eyebrow {
+		font-family: var(--font-cta);
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: var(--color-accent);
+		margin: 0 0 0.6rem;
 	}
 
 	.section h2 {
-		margin: 0 0 1.25rem;
 		font-family: var(--font-display);
 		font-weight: 600;
-		font-size: 1.5rem;
-		letter-spacing: -0.02em;
+		font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+		line-height: 1.15;
+		letter-spacing: -0.025em;
+		color: var(--color-text);
+		margin: 0 0 1rem;
 	}
 
-	.cards {
+	.section h2 em {
+		font-style: italic;
+		color: var(--color-accent);
+	}
+
+	.section__lead {
+		font-size: 1.0625rem;
+		line-height: 1.65;
+		color: var(--color-text-muted);
+		max-width: 40rem;
+		margin: 0 0 2.5rem;
+	}
+
+	/* ── Pain point cards ──────────────────────────────────────────────── */
+	.pains {
+		background: var(--color-bg);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.pain-cards {
 		list-style: none;
-		margin: 0;
+		margin: 2rem 0 0;
 		padding: 0;
 		display: grid;
 		gap: 1rem;
 	}
 
 	@media (min-width: 640px) {
-		.cards {
+		.pain-cards {
 			grid-template-columns: repeat(3, 1fr);
 			gap: 1.25rem;
 		}
 	}
 
-	.card {
-		margin: 0;
-		padding: 1.25rem;
+	.pain-card {
 		background: var(--color-surface);
 		border: 1px solid var(--color-border);
 		border-radius: 0.75rem;
-		box-shadow: 0 1px 2px rgba(28, 25, 23, 0.04);
+		padding: 1.5rem;
+		position: relative;
+		overflow: hidden;
+		box-shadow: 0 1px 3px rgba(28, 25, 23, 0.04);
+		transition: box-shadow 0.15s ease, border-color 0.15s ease;
 	}
 
-	.card h3 {
-		margin: 0 0 0.5rem;
-		font-size: 1rem;
+	.pain-card:hover {
+		border-color: rgba(15, 118, 110, 0.25);
+		box-shadow: 0 4px 16px rgba(15, 118, 110, 0.08);
+	}
+
+	.pain-card__num {
+		display: block;
+		font-family: var(--font-display);
+		font-size: 3rem;
 		font-weight: 600;
-		line-height: 1.35;
+		line-height: 1;
+		color: rgba(15, 118, 110, 0.1);
+		margin-bottom: 0.75rem;
+		letter-spacing: -0.04em;
 	}
 
-	.card p {
+	.pain-card h3 {
+		margin: 0 0 0.6rem;
+		font-family: var(--font-display);
+		font-size: 1.05rem;
+		font-weight: 600;
+		line-height: 1.3;
+		color: var(--color-text);
+	}
+
+	.pain-card p {
 		margin: 0;
 		font-size: 0.9375rem;
 		color: var(--color-text-muted);
-		line-height: 1.55;
+		line-height: 1.6;
 	}
 
-	.section--tint {
+	/* ── Feature grid ──────────────────────────────────────────────────── */
+	.features {
 		background: var(--color-surface);
-		padding: 2.5rem 1.5rem;
+	}
+
+	.feature-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	@media (min-width: 640px) {
+		.feature-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.feature {
+		padding: 1.5rem;
 		border: 1px solid var(--color-border);
 		border-radius: 0.75rem;
-    margin-bottom: 2.5rem;
+		background: var(--color-bg);
+		transition: border-color 0.15s ease, box-shadow 0.15s ease;
 	}
 
-	.section__intro {
-		margin: 0 0 1.25rem;
-		color: var(--color-text-muted);
-
+	.feature:hover {
+		border-color: rgba(15, 118, 110, 0.3);
+		box-shadow: 0 4px 16px rgba(15, 118, 110, 0.08);
 	}
 
-	.section__intro em {
-		font-style: italic;
-		color: var(--color-text);
+	.feature__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.25rem;
+		height: 2.25rem;
+		background: rgba(15, 118, 110, 0.1);
+		border-radius: 0.5rem;
+		color: var(--color-accent);
+		margin-bottom: 1rem;
 	}
 
-	.bullets {
-		margin: 0;
-		padding-left: 1.15rem;
-		color: var(--color-text-muted);
-	}
-
-	.bullets li {
-		margin-bottom: 0.75rem;
-		padding-left: 0.35rem;
-	}
-
-	.bullets li:last-child {
-		margin-bottom: 0;
-	}
-
-	.bullets strong {
-		color: var(--color-text);
+	.feature h3 {
+		margin: 0 0 0.5rem;
+		font-family: var(--font-display);
+		font-size: 1.05rem;
 		font-weight: 600;
+		line-height: 1.3;
+		color: var(--color-text);
 	}
 
+	.feature p {
+		margin: 0;
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.6;
+	}
+
+	/* ── CTA band ──────────────────────────────────────────────────────── */
 	.cta-band {
-		margin-top: 2.5rem;
-		padding: 2.5rem 1.5rem;
+		background:
+			radial-gradient(ellipse 70% 80% at 50% 110%, rgba(15, 118, 110, 0.35) 0%, transparent 65%),
+			var(--color-dark);
+		padding: 5rem 1.5rem;
 		text-align: center;
-		background: linear-gradient(160deg, #f0fdfa 0%, #faf8f5 100%);
-		border: 1px solid var(--color-border);
-		border-radius: 0.75rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cta-band::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+		background-size: 28px 28px;
+		pointer-events: none;
+	}
+
+	.cta-band__inner {
+		position: relative;
+		z-index: 1;
+		max-width: 38rem;
+		margin: 0 auto;
+	}
+
+	.cta-band__eyebrow {
+		font-family: var(--font-cta);
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: var(--color-accent-bright);
+		opacity: 0.8;
+		margin: 0 0 0.75rem;
 	}
 
 	.cta-band h2 {
-		margin: 0 0 0.5rem;
-		font-family: var(--font-cta);
+		font-family: var(--font-display);
 		font-weight: 600;
-		font-size: 1.35rem;
-		letter-spacing: -0.02em;
+		font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+		line-height: 1.15;
+		letter-spacing: -0.025em;
+		color: #ffffff;
+		margin: 0 0 0.75rem;
 	}
 
 	.cta-band p {
-		margin: 0 0 1.25rem;
-		color: var(--color-text-muted);
-		font-size: 0.9375rem;
+		font-size: 1rem;
+		color: rgba(255, 255, 255, 0.5);
+		margin: 0 0 2rem;
+	}
+
+	.cta-band__btn {
+		padding: 0.875rem 1.75rem;
+		font-size: 1rem;
+		box-shadow: 0 0 0 1px rgba(15, 118, 110, 0.45), 0 4px 20px rgba(15, 118, 110, 0.3);
+		transition: background 0.15s ease, box-shadow 0.15s ease;
+	}
+
+	.cta-band__btn:hover {
+		background: var(--color-accent-hover);
+		box-shadow: 0 0 0 1px rgba(15, 118, 110, 0.6), 0 6px 28px rgba(15, 118, 110, 0.4);
 	}
 
 </style>

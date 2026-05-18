@@ -42,10 +42,12 @@ const {
 		--color-text-muted: #57534e;
 		--color-accent: #0f766e;
 		--color-accent-hover: #0d9488;
+		--color-accent-bright: #2dd4bf;
 		--color-border: #e7e5e4;
+		--color-dark: #0d1117;
 		--font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-		--font-body: 'Georgia','Plus Jakarta Sans', system-ui, sans-serif;
-    --font-cta: 'Plus Jakarta Sans', system-ui, sans-serif;
+		--font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+		--font-cta: 'Plus Jakarta Sans', system-ui, sans-serif;
 	}
 
 	html {
@@ -64,18 +66,6 @@ const {
 		position: relative;
 	}
 
-	body::before {
-		content: '';
-		position: fixed;
-		inset: 0;
-		background-image: url('/teletrex%20large%20inverted%20transparent.png');
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: min(640px, 120vmin);
-		opacity: 0.8;
-		pointer-events: none;
-		z-index: -10;
-	}
 
 	.btn {
 		display: inline-flex;
