@@ -1,0 +1,398 @@
+---
+import InnerPage from '../../layouts/InnerPage.astro';
+---
+
+<InnerPage
+	title="Ekanta"
+	description="Ekanta by TeleTrex: a private, WebGPU-accelerated LLM chat app for Mac. Run powerful AI models entirely on your device — no cloud, no API keys, no data leaving your machine."
+>
+	<!-- Hero -->
+	<div class="ek-hero">
+		<div class="ek-hero__glow" aria-hidden="true"></div>
+		<div class="ek-hero__glow2" aria-hidden="true"></div>
+		<div class="ek-hero__badge">Free Download &nbsp;·&nbsp; macOS 12+</div>
+		<div class="ek-hero__title" role="heading" aria-level="1">Ekanta</div>
+		<p class="ek-hero__tagline">Your conversations stay on your machine. Full stop.</p>
+		<p class="ek-hero__desc">
+			A Mac app that runs large language models entirely on your GPU — no cloud,
+			no API keys, no data ever leaving your device.
+		</p>
+		<div class="ek-hero__buttons">
+			<a class="ek-dl ek-dl--primary" href="/downloads/Ekanta-1.0.0-arm64.dmg" download>
+				<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+					<polyline points="7 10 12 15 17 10"/>
+					<line x1="12" y1="15" x2="12" y2="3"/>
+				</svg>
+				Apple Silicon
+				<span class="ek-dl__sub">arm64 · 90 MB</span>
+			</a>
+			<a class="ek-dl" href="/downloads/Ekanta-1.0.0.dmg" download>
+				<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+					<polyline points="7 10 12 15 17 10"/>
+					<line x1="12" y1="15" x2="12" y2="3"/>
+				</svg>
+				Intel Mac
+				<span class="ek-dl__sub">x64 · 97 MB</span>
+			</a>
+		</div>
+		<p class="ek-hero__note">Requires macOS 12 Monterey or later. Models are downloaded on first use and cached locally.</p>
+	</div>
+
+	<!-- Feature pills -->
+	<div class="ek-pills" role="list" aria-label="Key features">
+		<span class="ek-pill" role="listitem"><span class="ek-pill__dot" aria-hidden="true"></span>100% Local</span>
+		<span class="ek-pill" role="listitem"><span class="ek-pill__dot" aria-hidden="true"></span>GPU-Accelerated</span>
+		<span class="ek-pill" role="listitem"><span class="ek-pill__dot" aria-hidden="true"></span>13 Models</span>
+		<span class="ek-pill" role="listitem"><span class="ek-pill__dot" aria-hidden="true"></span>OpenAI-Compatible API</span>
+		<span class="ek-pill" role="listitem"><span class="ek-pill__dot" aria-hidden="true"></span>No Subscription</span>
+	</div>
+
+	<h2 class="section-title"><span class="ek-gt">Private by design</span></h2>
+	<p class="prose-block">
+		Most AI tools route your conversations through remote servers — your questions, your context,
+		your data. Ekanta is different. Every model runs entirely on your Mac using WebGPU acceleration.
+		Nothing is transmitted. There is no server. Your conversations exist only on your device.
+	</p>
+	<p class="prose-block">
+		This matters for legal teams reviewing contracts, founders stress-testing strategy, clinicians
+		thinking through cases, and anyone who should not be pasting sensitive material into a chat box
+		connected to the internet.
+	</p>
+
+	<h2 class="section-title"><span class="ek-gt">Powerful models, no subscription</span></h2>
+	<p class="prose-block">
+		Ekanta ships with a curated catalogue of open-weight models optimised for Mac hardware — from
+		fast half-billion-parameter models for quick tasks to 8B reasoning models that rival much
+		larger cloud offerings. Models are downloaded once and cached. After that, they work offline,
+		indefinitely, with no ongoing cost.
+	</p>
+	<ul class="prose-block ek-list">
+		<li>Llama 3.1 &amp; 3.2 (Meta) — balanced quality and speed</li>
+		<li>DeepSeek-R1 distilled — chain-of-thought reasoning at 1.5B, 7B, and 8B</li>
+		<li>Qwen 2.5 (Alibaba) — strong coding and multilingual support</li>
+		<li>Mistral 7B — a reliable general-purpose benchmark</li>
+		<li>Gemma 2 (Google) — efficient instruction-following at 2B and 9B</li>
+	</ul>
+
+	<h2 class="section-title"><span class="ek-gt">A local API server, built in</span></h2>
+	<p class="prose-block">
+		Ekanta runs an OpenAI-compatible API server on your machine the moment it opens. Once a model
+		is loaded, any tool that speaks to OpenAI — coding assistants, automation scripts, Claude Code,
+		custom agents — can be pointed at Ekanta instead. No proxy, no configuration, no cloud bill.
+	</p>
+	<p class="prose-block">
+		The server also exposes Anthropic's <code>/v1/messages</code> format, so you can point
+		Claude Code directly at Ekanta with a single environment variable and use local models as your
+		coding assistant backend.
+	</p>
+
+	<h2 class="section-title"><span class="ek-gt">Built for the Mac</span></h2>
+	<p class="prose-block">
+		Ekanta uses WebGPU with Metal to accelerate inference on both Apple Silicon and Intel graphics.
+		The interface respects the macOS design language: native title bar, full keyboard navigation,
+		and a conversation history that persists across sessions. It feels like it belongs on your machine
+		because it was built for your machine.
+	</p>
+
+	<div class="ek-two-col">
+		<div class="ek-panel">
+			<h2 class="ek-panel__title"><span class="ek-gt">Best for</span></h2>
+			<ul class="ek-list ek-list--compact">
+				<li>Professionals who handle sensitive information and cannot use cloud AI services.</li>
+				<li>Developers who want a local inference backend for tools, agents, and coding assistants.</li>
+				<li>Teams subject to data-residency or compliance requirements that rule out SaaS AI.</li>
+				<li>Anyone who wants capable AI without a recurring subscription.</li>
+			</ul>
+		</div>
+		<div class="ek-panel">
+			<h2 class="ek-panel__title"><span class="ek-gt">What you get</span></h2>
+			<ul class="ek-list ek-list--compact">
+				<li>A fast, private chat interface with conversation history and system-prompt control.</li>
+				<li>GPU-accelerated inference for thirteen open-weight models out of the box.</li>
+				<li>An always-on local API server compatible with OpenAI and Anthropic client libraries.</li>
+				<li>Zero ongoing cost after download. No account required.</li>
+			</ul>
+		</div>
+	</div>
+
+	<p class="prose-block relay-actions">
+		<a class="btn ek-cta-btn" href="/downloads/Ekanta-1.0.0-arm64.dmg" download>Download for Apple Silicon</a>
+		<a class="inline-back" href="/products">← All products</a>
+	</p>
+</InnerPage>
+
+<style>
+	/* ── Hero ────────────────────────────────────────────────────────────── */
+	.ek-hero {
+		position: relative;
+		margin: 0 0 2rem;
+		padding: 2.75rem 2.5rem 2.25rem;
+		background: linear-gradient(135deg, #060b18 0%, #0a1628 45%, #0d1a3a 75%, #060b18 100%);
+		border-radius: 1.25rem;
+		border: 1px solid rgba(59, 130, 246, 0.22);
+		overflow: hidden;
+	}
+
+	.ek-hero::before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, transparent 0%, #3b82f6 30%, #22d3ee 65%, transparent 100%);
+	}
+
+	.ek-hero__glow {
+		position: absolute;
+		top: -100px;
+		right: -80px;
+		width: 380px;
+		height: 380px;
+		background: radial-gradient(ellipse, rgba(59, 130, 246, 0.22) 0%, rgba(139, 92, 246, 0.08) 45%, transparent 70%);
+		pointer-events: none;
+	}
+
+	.ek-hero__glow2 {
+		position: absolute;
+		bottom: -60px;
+		left: -40px;
+		width: 260px;
+		height: 260px;
+		background: radial-gradient(ellipse, rgba(34, 211, 238, 0.1) 0%, transparent 65%);
+		pointer-events: none;
+	}
+
+	.ek-hero__badge {
+		display: inline-block;
+		margin-bottom: 1.1rem;
+		padding: 0.3rem 0.8rem;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: #60a5fa;
+		background: rgba(59, 130, 246, 0.12);
+		border: 1px solid rgba(59, 130, 246, 0.28);
+		border-radius: 100px;
+	}
+
+	/* div, not h1 — avoids InnerPage's global h1 specificity fight */
+	.ek-hero__title {
+		margin: 0 0 0.6rem;
+		font-family: var(--font-display);
+		font-size: clamp(2.75rem, 8vw, 4.25rem);
+		font-weight: 700;
+		letter-spacing: -0.045em;
+		line-height: 1.0;
+		background: linear-gradient(135deg, #ffffff 0%, #93c5fd 45%, #22d3ee 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.ek-hero__tagline {
+		margin: 0 0 0.8rem;
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: #e2e8f0;
+		max-width: 34rem;
+	}
+
+	.ek-hero__desc {
+		margin: 0 0 1.85rem;
+		font-size: 0.9375rem;
+		line-height: 1.65;
+		color: #94a3b8;
+		max-width: 37rem;
+	}
+
+	.ek-hero__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.ek-dl {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.7rem 1.35rem;
+		border-radius: 0.6rem;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		text-decoration: none;
+		transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+		background: rgba(255, 255, 255, 0.07);
+		color: #e2e8f0;
+		border: 1px solid rgba(255, 255, 255, 0.13);
+	}
+
+	.ek-dl--primary {
+		background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 55%, #3b82f6 100%);
+		border-color: transparent;
+		color: #fff;
+		box-shadow: 0 0 22px rgba(59, 130, 246, 0.45), 0 4px 14px rgba(59, 130, 246, 0.22);
+	}
+
+	.ek-dl--primary:hover {
+		box-shadow: 0 0 32px rgba(59, 130, 246, 0.6), 0 4px 18px rgba(59, 130, 246, 0.3);
+		transform: translateY(-1px);
+	}
+
+	.ek-dl:not(.ek-dl--primary):hover {
+		background: rgba(255, 255, 255, 0.13);
+		transform: translateY(-1px);
+	}
+
+	.ek-dl__sub {
+		font-size: 0.8125rem;
+		font-weight: 400;
+		opacity: 0.65;
+	}
+
+	.ek-hero__note {
+		margin: 0;
+		font-size: 0.8125rem;
+		color: #3b4a5e;
+		line-height: 1.5;
+	}
+
+	/* ── Feature pills ───────────────────────────────────────────────────── */
+	.ek-pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0 0 2.75rem;
+	}
+
+	.ek-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		padding: 0.35rem 0.85rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: #93c5fd;
+		background: rgba(59, 130, 246, 0.07);
+		border: 1px solid rgba(59, 130, 246, 0.18);
+		border-radius: 100px;
+	}
+
+	.ek-pill__dot {
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: #3b82f6;
+		box-shadow: 0 0 6px rgba(59, 130, 246, 0.8);
+		flex-shrink: 0;
+	}
+
+	/* ── Gradient text helper (used on h2 spans and panel title spans) ───── */
+	.ek-gt {
+		background: linear-gradient(90deg, #60a5fa 0%, #22d3ee 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	/* ── Lists ───────────────────────────────────────────────────────────── */
+	.ek-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.ek-list li {
+		padding: 0.4rem 0 0.4rem 1.4rem;
+		margin: 0;
+		position: relative;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+	}
+
+	.ek-list li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.85em;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #3b82f6, #22d3ee);
+		box-shadow: 0 0 6px rgba(59, 130, 246, 0.55);
+	}
+
+	.ek-list--compact li {
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
+
+	/* ── Two-col panels ──────────────────────────────────────────────────── */
+	.ek-two-col {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		margin: 2.5rem 0 1.5rem;
+	}
+
+	@media (max-width: 580px) {
+		.ek-two-col { grid-template-columns: 1fr; }
+	}
+
+	.ek-panel {
+		padding: 1.5rem;
+		background: rgba(59, 130, 246, 0.04);
+		border: 1px solid rgba(59, 130, 246, 0.12);
+		border-radius: 0.875rem;
+	}
+
+	.ek-panel__title {
+		margin: 0 0 1rem;
+		font-family: var(--font-display);
+		font-size: 1.05rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+
+	/* ── Code ────────────────────────────────────────────────────────────── */
+	code {
+		font-family: 'SF Mono', 'Fira Code', monospace;
+		font-size: 0.875em;
+		background: rgba(59, 130, 246, 0.1);
+		padding: 0.15em 0.45em;
+		border-radius: 0.3rem;
+		color: #93c5fd;
+		border: 1px solid rgba(59, 130, 246, 0.22);
+	}
+
+	/* ── Bottom CTA ──────────────────────────────────────────────────────── */
+	.relay-actions {
+		margin-top: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1rem;
+	}
+
+	.ek-cta-btn {
+		color: #fff;
+		background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+		box-shadow: 0 0 22px rgba(59, 130, 246, 0.38), 0 4px 12px rgba(59, 130, 246, 0.2);
+	}
+
+	.ek-cta-btn:hover {
+		background: linear-gradient(135deg, #2563eb, #60a5fa);
+		box-shadow: 0 0 30px rgba(59, 130, 246, 0.55), 0 4px 16px rgba(59, 130, 246, 0.28);
+		transform: translateY(-1px);
+	}
+
+	.inline-back {
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: var(--color-text-muted);
+		text-decoration: none;
+	}
+
+	.inline-back:hover { color: #60a5fa; }
+</style>

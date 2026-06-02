@@ -26,6 +26,20 @@ import InnerPage from '../../layouts/InnerPage.astro';
 		</li>
 
 		<li>
+			<a class="product-card product-card--ekanta" href="/products/ekanta">
+				<div class="product-card--ekanta__glow" aria-hidden="true"></div>
+				<h2 class="product-card__name">Ekanta</h2>
+				<p class="product-card__tagline">Private, local AI chat for Mac — no cloud, no subscription</p>
+				<p class="product-card__desc">
+					Run powerful open-weight LLMs entirely on your Mac's GPU. Conversations never leave your
+					machine. Includes an OpenAI-compatible API server so any AI tool can use it as a local
+					backend. Free to download.
+				</p>
+				<span class="product-card__cta">Learn about Ekanta →</span>
+			</a>
+		</li>
+
+		<li>
 			<a class="product-card" href="/products/community">
 				<h2 class="product-card__name">TeleTrex Community</h2>
 				<p class="product-card__tagline">Holistic integrated solution for community education, event and membership management, and growth automation</p>
@@ -94,5 +108,55 @@ import InnerPage from '../../layouts/InnerPage.astro';
 		font-size: 0.9375rem;
 		font-weight: 600;
 		color: var(--color-accent);
+	}
+
+	/* ── Ekanta featured card ────────────────────────────────────────────── */
+	.product-card--ekanta {
+		background: linear-gradient(135deg, #060b18 0%, #0a1628 50%, #0d1a35 100%);
+		border-color: rgba(59, 130, 246, 0.22);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.product-card--ekanta::before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0;
+		height: 2px;
+		background: linear-gradient(90deg, transparent 0%, #3b82f6 30%, #22d3ee 70%, transparent 100%);
+	}
+
+	.product-card--ekanta__glow {
+		position: absolute;
+		top: -60px;
+		right: -50px;
+		width: 280px;
+		height: 280px;
+		background: radial-gradient(ellipse, rgba(59, 130, 246, 0.14) 0%, rgba(139, 92, 246, 0.06) 45%, transparent 70%);
+		pointer-events: none;
+	}
+
+	.product-card--ekanta:hover {
+		border-color: rgba(59, 130, 246, 0.5);
+		box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2), 0 0 0 1px rgba(59, 130, 246, 0.08);
+	}
+
+	.product-card--ekanta .product-card__name {
+		background: linear-gradient(135deg, #ffffff 0%, #93c5fd 40%, #22d3ee 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.product-card--ekanta .product-card__tagline {
+		color: #60a5fa;
+	}
+
+	.product-card--ekanta .product-card__desc {
+		color: #94a3b8;
+	}
+
+	.product-card--ekanta .product-card__cta {
+		color: #60a5fa;
 	}
 </style>
