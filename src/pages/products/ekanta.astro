@@ -4,7 +4,7 @@ import InnerPage from '../../layouts/InnerPage.astro';
 
 <InnerPage
 	title="Ekanta"
-	description="Ekanta by TeleTrex: a private, WebGPU-accelerated LLM chat app for Mac. Run powerful AI models entirely on your device — no cloud, no API keys, no data leaving your machine."
+	description="Ekanta by TeleTrex: a private, WebGPU-accelerated LLM chat app for Intel-based Macs with GPUs. Run powerful AI models entirely on your device — no cloud, no API keys, no data leaving your machine."
 >
 	<!-- Hero -->
 	<div class="ek-hero">
@@ -15,10 +15,11 @@ import InnerPage from '../../layouts/InnerPage.astro';
 		<p class="ek-hero__tagline">Your conversations stay on your machine. Full stop.</p>
 		<p class="ek-hero__desc">
 			A Mac app that runs large language models entirely on your GPU — no cloud,
-			no API keys, no data ever leaving your device.
+			no API keys, no data ever leaving your device. Apple Silicon and Intel Macs
+			with powerful AMD GPUs are both fully accelerated.
 		</p>
 		<div class="ek-hero__buttons">
-			<a class="ek-dl ek-dl--primary" href="/downloads/Ekanta-1.0.0-arm64.dmg" download>
+			<a class="ek-dl ek-dl--primary" href="https://github.com/louisroehrs/teletrex-ekanta/releases/download/v1.0.0/TeleTrex.Ekanta-1.0.0-arm64.dmg" download>
 				<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
 					<polyline points="7 10 12 15 17 10"/>
@@ -27,17 +28,17 @@ import InnerPage from '../../layouts/InnerPage.astro';
 				Apple Silicon
 				<span class="ek-dl__sub">arm64 · 90 MB</span>
 			</a>
-			<a class="ek-dl" href="/downloads/Ekanta-1.0.0.dmg" download>
+			<a class="ek-dl ek-dl--primary" href="https://github.com/louisroehrs/teletrex-ekanta/releases/download/v1.0.0/TeleTrex.Ekanta-1.0.0.dmg" download>
 				<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
 					<polyline points="7 10 12 15 17 10"/>
 					<line x1="12" y1="15" x2="12" y2="3"/>
 				</svg>
-				Intel Mac
+				Intel Mac <span class="ek-dl__amd">AMD GPU</span>
 				<span class="ek-dl__sub">x64 · 97 MB</span>
 			</a>
 		</div>
-		<p class="ek-hero__note">Requires macOS 12 Monterey or later. Models are downloaded on first use and cached locally.</p>
+		<p class="ek-hero__note">Requires macOS 12 Monterey or later · Models downloaded on first use and cached locally</p>
 	</div>
 
 	<!-- Feature pills -->
@@ -90,10 +91,11 @@ import InnerPage from '../../layouts/InnerPage.astro';
 
 	<h2 class="section-title"><span class="ek-gt">Built for the Mac</span></h2>
 	<p class="prose-block">
-		Ekanta uses WebGPU with Metal to accelerate inference on both Apple Silicon and Intel graphics.
-		The interface respects the macOS design language: native title bar, full keyboard navigation,
-		and a conversation history that persists across sessions. It feels like it belongs on your machine
-		because it was built for your machine.
+		Ekanta uses WebGPU with Metal to accelerate inference on Apple Silicon and on Intel Macs
+		with dedicated AMD Radeon graphics — the powerful discrete GPUs found in larger MacBook Pros
+		and iMacs give a significant speed boost over CPU-only inference. The interface respects the
+		macOS design language: native title bar, full keyboard navigation, and conversation history
+		that persists across sessions.
 	</p>
 
 	<div class="ek-two-col">
@@ -118,8 +120,20 @@ import InnerPage from '../../layouts/InnerPage.astro';
 	</div>
 
 	<p class="prose-block relay-actions">
-		<a class="btn ek-cta-btn" href="/downloads/Ekanta-1.0.0-arm64.dmg" download>Download for Apple Silicon</a>
-		<a class="inline-back" href="/products">← All products</a>
+		<a class="ek-dl ek-dl--primary" href="https://github.com/louisroehrs/teletrex-ekanta/releases/download/v1.0.0/TeleTrex.Ekanta-1.0.0-arm64.dmg" download>
+    	 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+					<polyline points="7 10 12 15 17 10"/>
+					<line x1="12" y1="15" x2="12" y2="3"/>
+				</svg>
+Download for Apple Silicon</a>
+    <a class="ek-dl ek-dl--primary" href="https://github.com/louisroehrs/teletrex-ekanta/releases/download/v1.0.0/TeleTrex.Ekanta-1.0.0.dmg" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+					<polyline points="7 10 12 15 17 10"/>
+					<line x1="12" y1="15" x2="12" y2="3"/>
+				</svg>
+        Download for Intel-based Mac with GPU</a>
 	</p>
 </InnerPage>
 
@@ -255,8 +269,20 @@ import InnerPage from '../../layouts/InnerPage.astro';
 	.ek-hero__note {
 		margin: 0;
 		font-size: 0.8125rem;
-		color: #3b4a5e;
+		color: #7a90aa;
 		line-height: 1.5;
+	}
+
+	.ek-dl__amd {
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #93c5fd;
+		background: rgba(59, 130, 246, 0.25);
+		padding: 0.1em 0.4em;
+		border-radius: 0.25rem;
+		margin-left: 0.15rem;
 	}
 
 	/* ── Feature pills ───────────────────────────────────────────────────── */
