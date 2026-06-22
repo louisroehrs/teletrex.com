@@ -1,0 +1,152 @@
+---
+import InnerPage from '../../layouts/InnerPage.astro';
+import { BOOK_CALL_URL } from '../../config/site';
+---
+
+<InnerPage
+	title="Career Navigator"
+	description="How TeleTrex built a Career Navigator that turns an OntologyOfValue assessment and a résumé into a personalized job-match report — complete with target companies, roles, and ready-to-send outreach drafts."
+>
+	<p class="study__meta study__meta--top">Case Study · Custom AI workflow</p>
+	<h1>Career Navigator: from assessment to first conversation</h1>
+	<p class="page-lead">
+		A career-coaching client wanted to turn raw psychometric data into action. We built Career
+		Navigator — a tool that reads a candidate's OntologyOfValue assessment and résumé, asks a few
+		targeted questions, and produces a personalized Career Navigator page plus a polished document
+		pointing to the companies, roles, and people worth pursuing next.
+	</p>
+
+	<article class="study">
+		<h2 class="study__title">The challenge</h2>
+		<p class="prose-block">
+			Candidates finishing the <a href="https://ontologyofvalue.com" target="_blank" rel="noopener">OntologyOfValue.com</a>
+			assessment received a rich profile of their values, strengths, and motivations — but were
+			often left asking "so what do I do with this?" The gap between self-knowledge and a concrete
+			job search was wide: which companies fit my values, which roles match my experience, and how
+			do I actually reach the right people without sounding generic?
+		</p>
+		<p class="prose-block">
+			Coaches were bridging that gap by hand — reading results, cross-referencing résumés, and
+			drafting outreach one candidate at a time. It was thoughtful work, but it didn't scale.
+		</p>
+	</article>
+
+	<article class="study">
+		<h2 class="study__title">What we built</h2>
+		<p class="prose-block">
+			Career Navigator ingests three inputs and turns them into a guided plan:
+		</p>
+		<ul class="prose-block study__list">
+			<li>
+				<strong>The OntologyOfValue assessment.</strong> The candidate's values and motivation
+				profile becomes the lens for every recommendation — so matches reflect what they care
+				about, not just what they've done.
+			</li>
+			<li>
+				<strong>The résumé.</strong> We parse experience, skills, and trajectory to anchor
+				recommendations in real, demonstrable qualifications.
+			</li>
+			<li>
+				<strong>A short set of questions.</strong> A few targeted prompts about the work
+				environment they want — team size, pace, remote vs. in-person, mission, compensation
+				priorities — sharpen the search before any matching happens.
+			</li>
+		</ul>
+		<p class="prose-block">
+			From there, the system generates a personalized <strong>Career Navigator page</strong> and a
+			downloadable <strong>document</strong> that includes:
+		</p>
+		<ul class="prose-block study__list">
+			<li><strong>Best-match companies</strong> — ranked against the candidate's values and the environment they described.</li>
+			<li><strong>Best-fit positions</strong> — specific roles where their experience and motivations line up.</li>
+			<li><strong>People to approach</strong> — relevant contacts at each target company.</li>
+			<li><strong>Ready-to-send outreach</strong> — tailored sample drafts for email and LinkedIn, written in the candidate's voice and referencing why the fit is real.</li>
+		</ul>
+	</article>
+
+	<article class="study">
+		<h2 class="study__title">How it works</h2>
+		<p class="prose-block">
+			Career Navigator follows a simple flow that feels like a conversation with a coach rather than a
+			form to fill out:
+		</p>
+		<ol class="prose-block study__list">
+			<li><strong>Connect the data.</strong> The candidate brings their OntologyOfValue results and uploads their résumé.</li>
+			<li><strong>Answer a few questions.</strong> The tool asks about the work environment they're looking for to focus the search.</li>
+			<li><strong>Generate the navigator.</strong> The system synthesizes everything into a ranked, explained set of companies and roles.</li>
+			<li><strong>Reach out.</strong> For each opportunity, it surfaces the right contacts and drafts personalized outreach the candidate can send with one edit.</li>
+		</ol>
+	</article>
+
+	<article class="study">
+		<h2 class="study__title">The result</h2>
+		<p class="prose-block">
+			Candidates leave the assessment with momentum instead of a question mark. Instead of a generic
+			"good luck out there," they get a concrete, values-aligned target list and the words to start
+			the conversation. Coaches scale their impact — the careful, personalized work they used to do
+			by hand now happens in minutes, leaving them free to focus on the human coaching that software
+			can't replace.
+		</p>
+		<p class="study__result"><strong>Result:</strong> Self-knowledge turned into a focused job search and warm outreach — assessment to first conversation, in one guided session.</p>
+	</article>
+
+	<p class="study cta-line">
+		Want a tool like this for your own assessment or coaching practice?
+		<a class="btn btn--primary" href={BOOK_CALL_URL}>Book a call</a>
+	</p>
+</InnerPage>
+
+<style>
+	.study {
+		margin: 0 0 2rem;
+		padding: 1.5rem;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+	}
+
+	.study__meta {
+		margin: 0 0 1rem;
+		font-family: var(--font-cta);
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--color-accent);
+		letter-spacing: 0.03em;
+	}
+
+	.study__meta--top {
+		margin-bottom: 0.5rem;
+	}
+
+	.study__title {
+		margin: 0 0 0.75rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.2rem;
+		letter-spacing: -0.02em;
+	}
+
+	.study__list {
+		padding-left: 1.25rem;
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	.study__result {
+		margin: 1rem 0 0;
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+	}
+
+	.study__result strong {
+		color: var(--color-text);
+	}
+
+	.cta-line {
+		margin-top: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1rem;
+	}
+</style>

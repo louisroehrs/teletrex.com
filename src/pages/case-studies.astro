@@ -13,6 +13,18 @@ import { BOOK_CALL_URL } from '../config/site';
 	</p>
 
 	<article class="study">
+		<h2 class="study__title"><a class="study__link" href="/case-studies/career-navigator">Career Navigator: from assessment to first conversation</a></h2>
+		<p class="study__meta">Custom AI workflow</p>
+		<p class="prose-block">
+			We built a Career Navigator tool that reads a candidate's OntologyOfValue assessment and
+			résumé, asks a few questions about the work environment they want, and generates a personalized
+			page and document highlighting best-match companies and roles — even surfacing contacts to
+			approach with ready-to-send email and LinkedIn drafts.
+		</p>
+		<p class="study__result"><strong>Result:</strong> Self-knowledge turned into a focused job search and warm outreach. <a href="/case-studies/career-navigator">Read the case study →</a></p>
+	</article>
+
+	<article class="study">
 		<h2 class="study__title">B2C real estate investment firm: scaling investor support and increasing conversion without scaling the business</h2>
 		<p class="study__meta">TeleTrex Associate</p>
 		<p class="prose-block">
@@ -92,6 +104,16 @@ import { BOOK_CALL_URL } from '../config/site';
 
 	.study:last-of-type {
 		margin-bottom: 0;
+	}
+
+	.study__link {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.study__link:hover {
+		color: var(--color-accent);
+		text-decoration: underline;
 	}
 
 	.study__title {
